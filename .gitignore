@@ -1,0 +1,40 @@
+# ============== macOS ==============
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# ============== Windows ==============
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============== Linux ==============
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ============== Editors / IDE ==============
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+.cursor/
+
+# ============== Markdown 工具产物 ==============
+*.html
+node_modules/
+.cache/
+
+# ============== 个人笔记 / 草稿（按需取消注释） ==============
+# drafts/
+# private/
+# *.draft.md
