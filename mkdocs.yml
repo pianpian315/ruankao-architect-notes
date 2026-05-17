@@ -1,0 +1,118 @@
+site_name: 软考系统架构设计师 备考资料
+site_url: https://pianpian315.github.io/ruankao-architect-notes/
+site_description: 软考高级 · 系统架构设计师 备考核心知识 + 2024-2025 真题考点 + 答题模板 + 项目背景库
+site_author: pianpian
+repo_url: https://github.com/pianpian315/ruankao-architect-notes
+repo_name: pianpian315/ruankao-architect-notes
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 pianpian · 内容采用 CC BY-NC-SA 4.0 协议
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+    - content.action.edit
+    - toc.follow
+    - announce.dismiss
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到亮色模式
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+nav:
+  - 首页: index.md
+  - 主干索引: 架构设计师考点整理.md
+  - 上午选择题: 选择题考点速记.md
+  - 下午Ⅰ 案例题: 案例分析考点速记.md
+  - 下午Ⅱ 论文题: 论文题考点速记.md
+
+plugins:
+  - search:
+      lang:
+        - en
+        - ja
+      separator: '[\s\u200b\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - tags
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pianpian315/ruankao-architect-notes
+      name: GitHub 仓库
+  generator: false

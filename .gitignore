@@ -34,6 +34,16 @@ $RECYCLE.BIN/
 node_modules/
 .cache/
 
+# ============== MkDocs 构建产物 ==============
+site/
+.mkdocs_cache/
+
+# ============== Python 虚拟环境 ==============
+venv/
+.venv/
+__pycache__/
+*.pyc
+
 # ============== PDF 构建脚本（仅保留生成产物，不公开构建逻辑） ==============
 build_pdf.js
 build_pdf.*.js
