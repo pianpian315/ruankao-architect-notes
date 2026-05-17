@@ -3,17 +3,31 @@
 > 📚 适用考试：软件系统架构设计师（**软考高级**）  
 > 📅 资料更新：2026 年 5 月（v1.2）  
 > 🎯 覆盖范围：近 10-15 年真题考点 + 2022 V2.0 大纲 + 2024-2025 真题 + 新热点  
+> 🌐 **在线网站**：**<https://pianpian315.github.io/ruankao-architect-notes/>** ⭐ 推荐入口  
 > 🔗 GitHub：[pianpian315/ruankao-architect-notes](https://github.com/pianpian315/ruankao-architect-notes)  
 > 📄 License：[CC BY-NC-SA 4.0](./LICENSE)（可分享学习，禁商用，需署名 + 相同方式共享）
 
 ---
 
-## 📥 快速下载
+## 🌐 网页版（最推荐）
+
+👉 **<https://pianpian315.github.io/ruankao-architect-notes/>**
+
+- 🔍 全文搜索（输入关键词如 "AOP"、"CAP" 即时跳转高亮）
+- 🧭 顶部 tab 导航 + 左侧目录树 + 右侧本页大纲
+- 🌗 暗色 / 亮色一键切换，移动端响应式
+- 🔄 内容随 GitHub 仓库自动同步（push 后约 2 分钟更新）
+- 📑 站内可直接下载 4 本 PDF
+
+---
+
+## 📥 其它阅读方式
 
 | 形式 | 适合场景 | 入口 |
 |------|---------|------|
-| 📖 在线阅读 Markdown | 在 GitHub 上直接看 / 搜索 | 点击下方各章节链接 |
-| 📑 PDF 离线版（手机/平板/打印） | 通勤背诵、纸质标注 | [`pdf_build/`](./pdf_build/) 目录下 4 个 PDF |
+| 🌐 **网页版（推荐）** | 在线阅读 + 全文搜索 + 多端适配 | **<https://pianpian315.github.io/ruankao-architect-notes/>** |
+| 📖 GitHub 直接看 Markdown | 想看 raw 源码 / 在仓库里搜索 | 点击下方各章节链接 |
+| 📑 PDF 离线版（手机/平板/打印）| 通勤背诵、纸质标注 | [`pdf_build/`](./pdf_build/) 目录下 4 个 PDF |
 | 📦 整套 ZIP 下载 | 全部资料一次拉走 | [Code → Download ZIP](https://github.com/pianpian315/ruankao-architect-notes/archive/refs/heads/main.zip) |
 | 🔧 git 克隆 | 想跟踪更新 | `git clone https://github.com/pianpian315/ruankao-architect-notes.git` |
 
