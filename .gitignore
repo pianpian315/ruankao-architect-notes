@@ -34,6 +34,14 @@ $RECYCLE.BIN/
 node_modules/
 .cache/
 
+# ============== PDF 构建脚本（仅保留生成产物，不公开构建逻辑） ==============
+build_pdf.js
+build_pdf.*.js
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
 # ============== 个人笔记 / 草稿（按需取消注释） ==============
 # drafts/
 # private/
