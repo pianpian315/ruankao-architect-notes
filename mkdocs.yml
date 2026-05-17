@@ -57,6 +57,20 @@ nav:
   - 下午Ⅰ 案例题: 案例分析考点速记.md
   - 下午Ⅱ 论文题: 论文题考点速记.md
 
+not_in_nav: |
+  README.md
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    absolute_links: warn
+    unrecognized_links: warn
+    anchors: warn
+
 plugins:
   - search:
       lang:

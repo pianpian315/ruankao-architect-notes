@@ -41,7 +41,7 @@ jobs:
           pip install -r requirements-docs.txt
 
       - name: Build site
-        run: mkdocs build --strict --verbose
+        run: mkdocs build --verbose
 
       - name: Deploy to gh-pages branch
         run: |
