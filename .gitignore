@@ -56,3 +56,10 @@ pnpm-lock.yaml
 # drafts/
 # private/
 # *.draft.md
+
+# ============== 维护者私人文档（不公开）==============
+PUSH_GUIDE.md
+NOTES.md
+TODO.md
+*.private.md
+.git/COMMIT_MSG_TMP
