@@ -1,0 +1,92 @@
+/* ===== 中文字体优化：苹方 / 思源黑体 / 微软雅黑 fallback ===== */
+:root {
+  --md-text-font: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB",
+                  "Microsoft YaHei", "WenQuanYi Micro Hei", "Helvetica Neue",
+                  Arial, sans-serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", "SF Mono", Consolas,
+                  "Liberation Mono", monospace;
+}
+
+/* ===== 正文段落更舒服的行高 / 字号 ===== */
+.md-typeset {
+  font-size: 0.78rem;
+  line-height: 1.75;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  margin-top: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  margin-top: 1.5em;
+}
+
+.md-typeset h4 {
+  font-weight: 600;
+}
+
+/* ===== 表格更紧凑，备考资料表格多 ===== */
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  font-weight: 600;
+}
+
+/* ===== 代码块行距 ===== */
+.md-typeset code {
+  font-size: 0.85em;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+/* ===== 提示块（admonition）中文优化 ===== */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 0.75rem;
+}
+
+/* ===== 公告条 / 横幅 ===== */
+.md-banner {
+  background: linear-gradient(90deg, #3949ab, #5e35b1);
+}
+
+/* ===== 移动端进一步压缩 ===== */
+@media screen and (max-width: 76.1875em) {
+  .md-typeset {
+    font-size: 0.8rem;
+  }
+}
+
+/* ===== 强调符号样式优化 ⚠️ ✅ 🔥 等 emoji 对齐 ===== */
+.md-typeset .twemoji {
+  height: 1.1em;
+  vertical-align: -0.15em;
+}
+
+/* ===== 首页大卡片样式 ===== */
+.grid.cards > :is(ul, ol) > li,
+.grid > .card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.grid.cards > :is(ul, ol) > li:hover,
+.grid > .card:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

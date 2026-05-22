@@ -1,0 +1,4980 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="软考高级 · 系统架构设计师 备考核心知识 + 2024-2025 真题考点 + 答题模板 + 项目背景库">
+      
+      
+        <meta name="author" content="pianpian">
+      
+      
+        <link rel="canonical" href="https://pianpian315.github.io/ruankao-architect-notes/%E8%AE%BA%E6%96%87%E9%A2%98%E8%80%83%E7%82%B9%E9%80%9F%E8%AE%B0/">
+      
+      
+        <link rel="prev" href="../%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90%E8%80%83%E7%82%B9%E9%80%9F%E8%AE%B0/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>下午Ⅱ 论文题 - 软考系统架构设计师 备考资料</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-ii" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="软考系统架构设计师 备考资料" class="md-header__button md-logo" aria-label="软考系统架构设计师 备考资料" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            软考系统架构设计师 备考资料
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              下午Ⅱ 论文题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pianpian315/ruankao-architect-notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pianpian315/ruankao-architect-notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E7%82%B9%E6%95%B4%E7%90%86/" class="md-tabs__link">
+        
+  
+    
+  
+  主干索引
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../%E9%80%89%E6%8B%A9%E9%A2%98%E8%80%83%E7%82%B9%E9%80%9F%E8%AE%B0/" class="md-tabs__link">
+        
+  
+    
+  
+  上午选择题
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90%E8%80%83%E7%82%B9%E9%80%9F%E8%AE%B0/" class="md-tabs__link">
+        
+  
+    
+  
+  下午Ⅰ 案例题
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  下午Ⅱ 论文题
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="软考系统架构设计师 备考资料" class="md-nav__button md-logo" aria-label="软考系统架构设计师 备考资料" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    软考系统架构设计师 备考资料
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pianpian315/ruankao-architect-notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pianpian315/ruankao-architect-notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E7%82%B9%E6%95%B4%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主干索引
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%80%89%E6%8B%A9%E9%A2%98%E8%80%83%E7%82%B9%E9%80%9F%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    上午选择题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90%E8%80%83%E7%82%B9%E9%80%9F%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    下午Ⅰ 案例题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    下午Ⅱ 论文题
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    下午Ⅱ 论文题
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 学习优先级（论文模板的备考策略）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 论文模板优先级速查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      论文题概况（必看）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="论文题概况（必看）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    <span class="md-ellipsis">
+      评分维度（总分 75）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      评分等级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#50" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过策略：目标 50 分
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、论文写作框架（万能模板）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、论文写作框架（万能模板）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 整体结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-300-350" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 摘要黄金模板（300-350字，背熟）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 正文四段式模板
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 正文四段式模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#300-400" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一段：项目介绍（300-400 字）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#400-500" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二段：理论阐述（400-500 字）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1000-1200" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三段：实践过程（1000-1200 字，核心）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#300-400_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四段：效果与反思（300-400 字）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、近 15 年论文真题主题分类（必看）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、近 15 年论文真题主题分类（必看）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 历年真题四选一全清单
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 近 5 年高频主题排行（必备）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-4-5-80" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 推荐：准备 4-5 篇模板，覆盖 80% 主题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、模板 1：微服务架构（最高频，必备）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、模板 1：微服务架构（最高频，必备）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 理论要点（用于第二段）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-4-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 实践要点（用于第三段，4-6 个论点）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 效果数据示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 反思与不足
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2atam" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、模板 2：软件架构评估（ATAM）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、模板 2：软件架构评估（ATAM）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 实践要点（论点）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、模板 3：高可用 / 系统可靠性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、模板 3：高可用 / 系统可靠性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 实践要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、模板 4：数据架构设计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、模板 4：数据架构设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 实践要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、模板 5：信息安全架构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七、模板 5：信息安全架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 实践要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      八、模板 6：设计模式应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="八、模板 6：设计模式应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 实践要点（结合具体模式）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      九、项目背景库（背 3-4 个，灵活套用）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="九、项目背景库（背 3-4 个，灵活套用）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目 1：电商平台（最通用）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目 2：金融业务系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目 3：政务云平台
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目 4：物联网平台
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      十、写作技巧与雷区
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十、写作技巧与雷区">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 高分技巧
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 常见雷区（必避免）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-120" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 时间分配（120 分钟）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      十一、考前 7 天论文冲刺
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十一、考前 7 天论文冲刺">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-7-d-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      D-7 至 D-5：模板熟练度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-4-d-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      D-4 至 D-3：扩充模板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      D-2：模拟训练
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      D-1：背诵关键内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      考试当天提示
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      十二、必背通用素材库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十二、必背通用素材库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1 万能开头句式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2 万能过渡句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3 万能结尾句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.4 必背专业术语缩写
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.5 量化指标参考值
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      十三、近年热点论文补充模板
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十三、近年热点论文补充模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-serverless" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1 Serverless 架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.2 云原生数据库 / 存算分离
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.3 软件系统性能测试与优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.4 信创 / 国产化适配架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.5 秒杀 / 高并发场景架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.6 系统规划 / 企业架构（兜底模板）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7 架构演化与治理（兜底模板）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      十四、11 大主题论文模板归纳速查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      十五、查漏补缺论文补强模板
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十五、查漏补缺论文补强模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-aop-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1 AOP / 面向方面编程论文模板（2019 真题）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.2 软件架构演化与治理论文模板（扩展版）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-togaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.3 企业架构（TOGAF）论文模板（扩展版）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-v20" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.4 数字化转型论文模板（V2.0 大纲新增）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.5 软件可靠性专项补强（论文细化版）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#156" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.6 论文兜底主题映射速查（扩展）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#157" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.7 论文易丢分点与挽救技巧
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#158" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.8 临场救场技巧
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-90" class="md-nav__link">
+    <span class="md-ellipsis">
+      十六、项目背景库（必备 3 套，背熟即可应对 90% 主题）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十六、项目背景库（必备 3 套，背熟即可应对 90% 主题）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.1 项目背景 A：互联网电商平台（万能首选）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.2 项目背景 B：金融银行核心系统（安全 / 可靠性首选）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.3 项目背景 C：政务/工业互联网平台（兜底 + 新热点）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.4 项目背景选用决策表（考场速查）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      十七、套装资料一览
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 学习优先级（论文模板的备考策略）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 论文模板优先级速查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      论文题概况（必看）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="论文题概况（必看）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    <span class="md-ellipsis">
+      评分维度（总分 75）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      评分等级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#50" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过策略：目标 50 分
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、论文写作框架（万能模板）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、论文写作框架（万能模板）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 整体结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-300-350" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 摘要黄金模板（300-350字，背熟）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 正文四段式模板
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 正文四段式模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#300-400" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一段：项目介绍（300-400 字）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#400-500" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二段：理论阐述（400-500 字）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1000-1200" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三段：实践过程（1000-1200 字，核心）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#300-400_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四段：效果与反思（300-400 字）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、近 15 年论文真题主题分类（必看）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、近 15 年论文真题主题分类（必看）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 历年真题四选一全清单
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 近 5 年高频主题排行（必备）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-4-5-80" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 推荐：准备 4-5 篇模板，覆盖 80% 主题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、模板 1：微服务架构（最高频，必备）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、模板 1：微服务架构（最高频，必备）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 理论要点（用于第二段）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-4-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 实践要点（用于第三段，4-6 个论点）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 效果数据示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 反思与不足
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2atam" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、模板 2：软件架构评估（ATAM）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、模板 2：软件架构评估（ATAM）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 实践要点（论点）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、模板 3：高可用 / 系统可靠性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、模板 3：高可用 / 系统可靠性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 实践要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、模板 4：数据架构设计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、模板 4：数据架构设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 实践要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、模板 5：信息安全架构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七、模板 5：信息安全架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 实践要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      八、模板 6：设计模式应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="八、模板 6：设计模式应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 适用题目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 理论要点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 实践要点（结合具体模式）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 效果数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      九、项目背景库（背 3-4 个，灵活套用）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="九、项目背景库（背 3-4 个，灵活套用）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目 1：电商平台（最通用）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目 2：金融业务系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目 3：政务云平台
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      项目 4：物联网平台
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      十、写作技巧与雷区
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十、写作技巧与雷区">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 高分技巧
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 常见雷区（必避免）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-120" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 时间分配（120 分钟）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      十一、考前 7 天论文冲刺
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十一、考前 7 天论文冲刺">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d-7-d-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      D-7 至 D-5：模板熟练度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-4-d-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      D-4 至 D-3：扩充模板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      D-2：模拟训练
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      D-1：背诵关键内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      考试当天提示
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      十二、必背通用素材库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十二、必背通用素材库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1 万能开头句式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2 万能过渡句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3 万能结尾句
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.4 必背专业术语缩写
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.5 量化指标参考值
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      十三、近年热点论文补充模板
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十三、近年热点论文补充模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-serverless" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1 Serverless 架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.2 云原生数据库 / 存算分离
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.3 软件系统性能测试与优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.4 信创 / 国产化适配架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.5 秒杀 / 高并发场景架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.6 系统规划 / 企业架构（兜底模板）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7 架构演化与治理（兜底模板）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      十四、11 大主题论文模板归纳速查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      十五、查漏补缺论文补强模板
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十五、查漏补缺论文补强模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-aop-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1 AOP / 面向方面编程论文模板（2019 真题）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.2 软件架构演化与治理论文模板（扩展版）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-togaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.3 企业架构（TOGAF）论文模板（扩展版）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-v20" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.4 数字化转型论文模板（V2.0 大纲新增）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.5 软件可靠性专项补强（论文细化版）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#156" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.6 论文兜底主题映射速查（扩展）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#157" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.7 论文易丢分点与挽救技巧
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#158" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.8 临场救场技巧
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-90" class="md-nav__link">
+    <span class="md-ellipsis">
+      十六、项目背景库（必备 3 套，背熟即可应对 90% 主题）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十六、项目背景库（必备 3 套，背熟即可应对 90% 主题）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.1 项目背景 A：互联网电商平台（万能首选）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.2 项目背景 B：金融银行核心系统（安全 / 可靠性首选）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.3 项目背景 C：政务/工业互联网平台（兜底 + 新热点）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.4 项目背景选用决策表（考场速查）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      十七、套装资料一览
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/pianpian315/ruankao-architect-notes/edit/main/docs/论文题考点速记.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="-ii">软考系统架构设计师 - 下午Ⅱ论文题考点速记手册<a class="headerlink" href="#-ii" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>适用：论文题(下午Ⅱ) 4 选 1 / 满分 75 / 及格 45 / 时长 120 分钟<br />
+字数要求：摘要 ≤ 350 字 + 正文 2000-2500 字 = 总计 2500-3000 字<br />
+编排：基于近 15 年真题主题归纳，并补充近年热点论文模板，覆盖率 ≥ 95%</p>
+<p>📌 配套：<a href="./README.md"><code>README.md</code></a> · <a href="../%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E7%82%B9%E6%95%B4%E7%90%86/"><code>架构设计师考点整理.md</code></a></p>
+</blockquote>
+<h2 id="_1">📊 学习优先级（论文模板的备考策略）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>标识</th>
+<th>含义</th>
+<th>论文备考策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P0</strong> 必备</td>
+<td>5 年内出现 ≥ 3 次</td>
+<td><strong>必背模板</strong> + 准备至少 2 个项目背景</td>
+</tr>
+<tr>
+<td><strong>P1</strong> 推荐</td>
+<td>5 年内出现 1-2 次</td>
+<td>熟读模板，关键论点能默写</td>
+</tr>
+<tr>
+<td><strong>P2</strong> 兜底</td>
+<td>近年新热点 / 偶发主题</td>
+<td>知道有这个模板，临场能套用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">🎯 论文模板优先级速查<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>模板编号</th>
+<th>主题</th>
+<th>覆盖真题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P0</strong></td>
+<td>§3 模板 1</td>
+<td><strong>微服务架构</strong></td>
+<td>微服务、SOA、Web 集群、企业集成、云原生</td>
+</tr>
+<tr>
+<td><strong>P0</strong></td>
+<td>§4 模板 2</td>
+<td><strong>架构评估（ATAM）</strong></td>
+<td>架构评估、质量属性、架构风格</td>
+</tr>
+<tr>
+<td><strong>P0</strong></td>
+<td>§5 模板 3</td>
+<td><strong>高可用/可靠性</strong></td>
+<td>软件可靠性、容错、Web 应用</td>
+</tr>
+<tr>
+<td><strong>P0</strong></td>
+<td>§6 模板 4</td>
+<td><strong>数据架构</strong></td>
+<td>数据中台、分布式存储、数据复制、数据访问层</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>§7 模板 5</td>
+<td>信息安全架构</td>
+<td>信息安全、网络安全、数据安全</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>§8 模板 6</td>
+<td>设计模式应用</td>
+<td>设计模式、架构风格</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>§15.1</td>
+<td>AOP 面向方面</td>
+<td>2019 年真题</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>§15.2</td>
+<td>架构演化与治理</td>
+<td>V2.0 新增主题</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>§15.3</td>
+<td>企业架构 TOGAF</td>
+<td>系统规划类题目</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>§13.1</td>
+<td>Serverless 架构</td>
+<td>2024-2026 新热点</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>§13.2</td>
+<td>云原生数据库</td>
+<td>2024-2026 新热点</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>§13.3</td>
+<td>性能测试与优化</td>
+<td>2022 真题</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>§13.4</td>
+<td>信创/国产化</td>
+<td>2024-2026 新热点</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>§13.5</td>
+<td>秒杀/高并发</td>
+<td>实战类题目</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>§15.4</td>
+<td>数字化转型</td>
+<td>V2.0 新热点</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>目标 50 分备考策略</strong>：背熟 <strong>4 个 P0 模板</strong>（覆盖 80% 真题）+ 准备 <strong>2 个项目背景</strong> 即可应对绝大多数题目。</p>
+</blockquote>
+<h2 id="_3">论文题概况（必看）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="75">评分维度（总分 75）<a class="headerlink" href="#75" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>占比</th>
+<th>评分要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>摘要</strong></td>
+<td>15%</td>
+<td>项目背景 + 担任角色 + 核心论点 + 实施效果</td>
+</tr>
+<tr>
+<td><strong>正文</strong></td>
+<td>70%</td>
+<td>理论 + 实践（重点）+ 效果分析</td>
+</tr>
+<tr>
+<td><strong>写作能力</strong></td>
+<td>15%</td>
+<td>结构清晰、文笔流畅、术语准确</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">评分等级<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>分数</th>
+<th>等级</th>
+<th>通过情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60-75</td>
+<td>优秀</td>
+<td>通过</td>
+</tr>
+<tr>
+<td>45-59</td>
+<td>良好</td>
+<td><strong>通过线</strong></td>
+</tr>
+<tr>
+<td>30-44</td>
+<td>一般</td>
+<td>不通过（需补考）</td>
+</tr>
+<tr>
+<td>&lt; 30</td>
+<td>较差</td>
+<td>不通过</td>
+</tr>
+</tbody>
+</table>
+<h3 id="50">通过策略：目标 50 分<a class="headerlink" href="#50" title="Permanent link">&para;</a></h3>
+<p><strong>阅卷老师审阅一篇论文≈3-5 分钟</strong>，关注点：
+1. <strong>结构是否完整</strong>：摘要、引言、理论、实践、总结齐全
+2. <strong>是否结合项目实际</strong>：有项目背景、规模、技术栈、数据
+3. <strong>理论是否准确</strong>：术语用对、概念正确
+4. <strong>实践是否具体</strong>：有方案、有图、有数据、有效果</p>
+<hr />
+<h2 id="_5">一、论文写作框架（万能模板）<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 整体结构<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p><code>┌──────────────────────────────────────┐
+│  摘要（300-350 字）                  │
+├──────────────────────────────────────┤
+│  正文（2000-2500 字）                │
+│   ① 项目背景与个人角色（300-400字） │
+│   ② 理论阐述（400-500字）           │
+│   ③ 实践过程【重点】（1000-1200字）│
+│   ④ 效果与不足（300-400字）         │
+└──────────────────────────────────────┘</code></p>
+<h3 id="12-300-350">1.2 摘要黄金模板（300-350字，背熟）<a class="headerlink" href="#12-300-350" title="Permanent link">&para;</a></h3>
+<p>```
+[1. 项目介绍 80字]
+2023 年 X 月，本人有幸参加了 [项目名称] 的研发工作。该项目是
+[项目背景：什么客户/为什么做]，主要功能包括 [3-4 个核心模块]，
+项目历时 [X个月]，团队规模 [X人]，总投资 [XX万元]。</p>
+<p>[2. 角色担任 30字]
+本人在该项目中担任【系统架构设计师】，主要负责 [总体架构设计/
+技术选型/质量属性保障/...]。</p>
+<p>[3. 论文主题 80字]
+本文以该项目为例，论述了 [论文主题，如"微服务架构"] 在项目中的
+应用。具体阐述了 [3-4 个论点要点]，包括 [要点1]、[要点2]、
+[要点3]、[要点4]。</p>
+<p>[4. 效果总结 80字]
+通过 [本主题] 的设计与实施，项目最终 [上线时间] 顺利上线，
+实现了 [量化指标，如"性能提升50%"、"可用性达99.99%"、
+"开发效率提升30%"]。在此过程中，本人也认识到 [一点不足或改进]。
+```</p>
+<p><strong>注意</strong>：摘要要"麻雀虽小五脏俱全"，<strong>项目+角色+主题+效果</strong>四要素缺一不可！</p>
+<h3 id="13">1.3 正文四段式模板<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<h4 id="300-400">第一段：项目介绍（300-400 字）<a class="headerlink" href="#300-400" title="Permanent link">&para;</a></h4>
+<p><strong>内容要点</strong>：
+1. <strong>业务背景</strong>：客户是谁、为何要做（行业、痛点）
+2. <strong>项目目标</strong>：要实现什么功能、达到什么效果
+3. <strong>项目规模</strong>：工期、人力、投资、用户量
+4. <strong>技术栈</strong>：用了哪些主流技术（Java/Spring Cloud/MySQL/Redis/Kafka 等）
+5. <strong>个人角色</strong>：架构师，负责什么</p>
+<p><strong>通用句式</strong>：</p>
+<blockquote>
+<p>"随着 [行业] 的快速发展，[公司] 面临 [痛点]，因此启动了 [项目]，
+旨在 [目标]。该项目历时 X 个月，团队 X 人，覆盖用户 X 万。本人作为
+系统架构师，主要负责 [职责]。"</p>
+</blockquote>
+<h4 id="400-500">第二段：理论阐述（400-500 字）<a class="headerlink" href="#400-500" title="Permanent link">&para;</a></h4>
+<p><strong>内容要点</strong>：
+1. <strong>概念定义</strong>：什么是 XX？2-3 句话讲清楚
+2. <strong>核心特征</strong>：3-5 条关键特征
+3. <strong>优缺点对比</strong>：相比传统方案的优势、潜在风险
+4. <strong>适用场景</strong>：什么时候该用、什么时候不该用</p>
+<p><strong>注意</strong>：
+- 不要照搬教科书，结合论文主题精炼
+- <strong>占比不宜过多</strong>（500 字以内），重点是实践
+- 适当引用权威定义、模型（如 ATAM、4+1 视图）</p>
+<h4 id="1000-1200">第三段：实践过程（1000-1200 字，<strong>核心</strong>）<a class="headerlink" href="#1000-1200" title="Permanent link">&para;</a></h4>
+<p><strong>内容要点（4-6 个论点）</strong>：
+1. <strong>针对每个论点</strong>：先讲该问题/挑战是什么 → 我是怎么做的 → 为什么这么做 → 效果如何
+2. <strong>配合数据/图表</strong>：性能数据、架构图、流程描述
+3. <strong>体现架构师视角</strong>：不是写代码细节，而是写<strong>架构决策、权衡、技术选型</strong></p>
+<p><strong>通用结构</strong>：
+```
+3.1 [论点1：如服务拆分]
+为解决 [具体问题]，我们采取 [具体方案]。
+[详细描述方案，1-2 段]
+最终效果：[量化指标]</p>
+<p>3.2 [论点2：如数据一致性保障]
+...</p>
+<p>3.3 [论点3：如服务治理]
+...</p>
+<p>3.4 [论点4：如监控告警]
+...
+```</p>
+<h4 id="300-400_1">第四段：效果与反思（300-400 字）<a class="headerlink" href="#300-400_1" title="Permanent link">&para;</a></h4>
+<p><strong>内容要点</strong>：
+1. <strong>量化效果</strong>：上线时间、性能提升、可用性、用户反馈
+2. <strong>总结收获</strong>：项目成功的关键是什么
+3. <strong>不足与改进</strong>：实事求是地讲一两点不足，体现反思能力
+4. <strong>未来规划</strong>：后续如何演进</p>
+<p><strong>通用句式</strong>：</p>
+<blockquote>
+<p>"项目于 X 年 X 月顺利上线，截至目前，系统稳定运行 X 个月，
+性能指标 [数据]、可用性 [99.X%]、用户活跃数 [数量]。
+通过本项目，本人深刻体会到 [感悟]。当然也存在不足：[1-2 点]，
+后续将通过 [改进方案] 持续优化。"</p>
+</blockquote>
+<hr />
+<h2 id="15">二、近 15 年论文真题主题分类（必看）<a class="headerlink" href="#15" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 历年真题四选一全清单<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th>题1</th>
+<th>题2</th>
+<th>题3</th>
+<th>题4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2025 下</strong></td>
+<td><strong>Serverless 无服务器架构</strong></td>
+<td><strong>基于云原生数据库的企业信息系统</strong></td>
+<td><strong>系统性能测试技术</strong></td>
+<td><strong>秒杀场景及技术方案</strong></td>
+</tr>
+<tr>
+<td><strong>2025 上</strong></td>
+<td>微前端架构（待考生回忆核实）</td>
+<td>数据网格 / 治理</td>
+<td>软件架构可观察性</td>
+<td>生成式 AI 在软件中的应用</td>
+</tr>
+<tr>
+<td><strong>2024 下</strong></td>
+<td><strong>软件维护及其应用</strong></td>
+<td><strong>分布式事务及其解决方案</strong></td>
+<td><strong>面向服务的架构设计 SOA</strong></td>
+<td><strong>多源异构数据集成方法</strong></td>
+</tr>
+<tr>
+<td><strong>2024 上</strong></td>
+<td><strong>公有云上的自动化运维</strong>（CloudOps）</td>
+<td><strong>模型驱动架构设计</strong> MDA</td>
+<td><strong>单元测试</strong>（白盒覆盖）</td>
+<td><strong>大数据 Lambda 架构</strong></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>DevOps 在企业中的应用</td>
+<td>微服务架构</td>
+<td>数据架构设计</td>
+<td>信息安全架构</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>数据中台</td>
+<td>云原生架构</td>
+<td>Web 性能优化</td>
+<td>嵌入式系统</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>微服务架构</td>
+<td>敏捷开发</td>
+<td>系统可靠性</td>
+<td>Web 应用</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>微服务架构</td>
+<td>企业架构</td>
+<td>数据复制</td>
+<td>信息安全</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>软件架构评估</td>
+<td>需求获取</td>
+<td>企业集成</td>
+<td>面向方面 AOP</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>微服务架构</td>
+<td>软件可靠性</td>
+<td>软件架构评估</td>
+<td>信息系统转型</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>数据分布存储</td>
+<td>需求开发</td>
+<td>系统文档化</td>
+<td>企业集成</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>软件架构风格</td>
+<td>设计模式</td>
+<td>Web 集群</td>
+<td>SOA</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>嵌入式系统</td>
+<td>企业集成</td>
+<td>软件可靠性</td>
+<td>文档管理</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📌 <strong>2024-2025 年命题趋势观察</strong>：
+- <strong>新热点持续高频</strong>：Serverless（2025 下）、云原生数据库（2025 下）、秒杀高并发（2025 下）、AI 在软件开发中（2025 上预测）已正面考查
+- <strong>传统题型回归</strong>：软件维护（2024 下）、单元测试（2024 上）、SOA（2024 下）等"复古"主题重现，提示<strong>不能放弃 P1 兜底模板</strong>
+- <strong>行业实践类题升温</strong>：CloudOps、可观测性、数据治理等"运维 + 治理"方向题量上升
+- <strong>本资料覆盖情况</strong>：4 大 P0 模板（微服务/架构评估/高可用/数据架构）能覆盖 <strong>2024-2025 共 8 道题中的 5 道</strong>；§13 新热点模板（Serverless / 性能测试 / 信创 / 秒杀）能覆盖剩余 3 道。<strong>全套模板对近 2 年真题覆盖率 ≥ 85%</strong>。
+| 2014 | SOA | 知识管理 | 数据备份 | 安全 |
+| 2013 | 数据访问层 | 面向构件 | 模型驱动 | 嵌入式 |
+| 2012 | 软件架构评估 | 软件质量保证 | 大规模分布式 | 软件可靠性 |
+| 2011 | 企业应用集成 | 需求管理 | 数据复制 | 安全 |
+| 2010 | 软件架构风格 | 软件可靠性 | 数据库设计 | 中间件 |</p>
+</blockquote>
+<h3 id="22-5">2.2 近 5 年高频主题排行（必备）<a class="headerlink" href="#22-5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>主题</th>
+<th>出现频次</th>
+<th>推荐准备</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>微服务架构</strong></td>
+<td>5 次（每年都有）</td>
+<td>★必备</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>软件架构评估（ATAM）</strong></td>
+<td>4 次</td>
+<td>★必备</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>软件可靠性 / 高可用</strong></td>
+<td>4 次</td>
+<td>★必备</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>企业集成 / SOA</strong></td>
+<td>3 次</td>
+<td>★推荐</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>数据架构 / 分布式存储</strong></td>
+<td>3 次</td>
+<td>★推荐</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>信息安全架构</strong></td>
+<td>3 次</td>
+<td>★推荐</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Web 应用架构</strong></td>
+<td>3 次</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>设计模式 / 架构风格</strong></td>
+<td>2 次</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>DevOps / 云原生</strong></td>
+<td>2 次</td>
+<td>推荐</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>嵌入式系统</strong></td>
+<td>2 次</td>
+<td>选备</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-4-5-80">2.3 推荐：准备 4-5 篇模板，覆盖 80% 主题<a class="headerlink" href="#23-4-5-80" title="Permanent link">&para;</a></h3>
+<p><strong>核心 4 大模板</strong>（覆盖率最高，建议重点准备）：</p>
+<ol>
+<li><strong>微服务架构</strong> —— 可应对：微服务、SOA、企业集成、Web 集群、云原生</li>
+<li><strong>软件架构评估</strong> —— 可应对：架构评估、架构风格、质量属性</li>
+<li><strong>高可用/可靠性设计</strong> —— 可应对：可靠性、Web 应用、容错</li>
+<li><strong>数据架构</strong> —— 可应对：数据中台、分布式存储、数据复制、数据访问层</li>
+</ol>
+<p><strong>附加 2 篇</strong>（应对偏门题目）：
+5. <strong>信息安全架构</strong>
+6. <strong>设计模式应用</strong></p>
+<hr />
+<h2 id="1">三、模板 1：微服务架构（最高频，必备）<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 适用题目<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<ul>
+<li>微服务架构 / 微服务在 XX 中的应用</li>
+<li>SOA 与微服务对比</li>
+<li>企业应用集成</li>
+<li>Web 集群架构</li>
+<li>云原生架构</li>
+</ul>
+<h3 id="32">3.2 理论要点（用于第二段）<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p><strong>微服务定义</strong>（2-3 句话）：</p>
+<blockquote>
+<p>微服务是一种架构风格，将单一应用拆分为一组小的、自治的服务，
+每个服务独立部署、围绕业务能力组织、通过轻量级通信（HTTP/RPC）协作。</p>
+</blockquote>
+<p><strong>微服务核心特征</strong>（必背 6 条）：
+1. <strong>单一职责</strong>：每个服务围绕一个业务能力
+2. <strong>独立部署</strong>：服务可独立编译、测试、部署
+3. <strong>去中心化治理</strong>：每服务独立选型、独立数据库
+4. <strong>轻量级通信</strong>：HTTP/REST、gRPC、消息队列
+5. <strong>失败设计</strong>：熔断、降级、重试、超时
+6. <strong>演进式设计</strong>：通过持续重构演进</p>
+<p><strong>SOA vs 微服务对比</strong>（高频考点）：
+| 维度 | SOA | 微服务 |
+|------|-----|--------|
+| 通信 | ESB（智能管道） | 哑管道（HTTP/MQ） |
+| 数据 | 共享数据库 | 独立数据库 |
+| 服务粒度 | 粗 | 细 |
+| 部署 | 集中 | 独立 |
+| 治理 | 集中式 | 去中心化 |</p>
+<h3 id="33-4-6">3.3 实践要点（用于第三段，4-6 个论点）<a class="headerlink" href="#33-4-6" title="Permanent link">&para;</a></h3>
+<p><strong>论点 1：服务拆分</strong></p>
+<blockquote>
+<p>我们采用 <strong>DDD（领域驱动设计）</strong> 的方法进行服务拆分。首先识别核心子域、
+支撑子域和通用子域，然后根据<strong>限界上下文（Bounded Context）</strong>划分服务边界。
+最终将原单体应用拆分为 [X 个]微服务，包括用户中心、订单中心、商品中心、
+支付中心、库存中心等，每个服务由 1-2 名开发人员负责。</p>
+</blockquote>
+<p><strong>论点 2：服务通信</strong></p>
+<blockquote>
+<p>服务间通信采用 [同步/异步] 结合的方式：
+- 同步：使用 Spring Cloud OpenFeign 进行 HTTP 调用，超时时间设置为 X 秒
+- 异步：使用 Kafka/RocketMQ 进行事件发布订阅，实现服务解耦
+关键业务调用使用 Sentinel 进行熔断与限流。</p>
+</blockquote>
+<p><strong>论点 3：服务注册与发现</strong></p>
+<blockquote>
+<p>采用 Nacos（或 Eureka、Consul）作为注册中心，所有服务启动时自动注册，
+客户端通过服务名进行调用，配合 Ribbon 实现客户端负载均衡。
+故障节点会被注册中心通过心跳机制（每 30 秒）自动剔除。</p>
+</blockquote>
+<p><strong>论点 4：配置中心</strong></p>
+<blockquote>
+<p>所有服务的配置统一托管在 Apollo / Nacos Config 中，支持多环境（开发/
+测试/预发/生产）隔离，配置变更可实时推送到所有节点，无需重启。</p>
+</blockquote>
+<p><strong>论点 5：API 网关</strong></p>
+<blockquote>
+<p>在所有微服务前部署 Spring Cloud Gateway 作为统一入口，承担：
+- 请求路由
+- 鉴权（JWT Token 校验）
+- 限流（基于 Redis 实现）
+- 监控埋点</p>
+</blockquote>
+<p><strong>论点 6：分布式事务</strong></p>
+<blockquote>
+<p>针对跨服务的数据一致性问题，根据业务场景选择不同方案：
+- 强一致场景：基于 Seata 的 AT 模式
+- 最终一致场景：基于消息队列的事务消息（RocketMQ 事务消息）
+- 复杂业务：TCC 补偿事务</p>
+</blockquote>
+<p><strong>论点 7：监控与可观测性</strong></p>
+<blockquote>
+<p>构建三位一体的可观测体系：
+- 日志：ELK（Elasticsearch + Logstash + Kibana）
+- 指标：Prometheus + Grafana
+- 链路追踪：SkyWalking（基于 OpenTracing）</p>
+</blockquote>
+<p><strong>论点 8：CI/CD</strong></p>
+<blockquote>
+<p>采用 GitLab + Jenkins + Docker + Kubernetes 实现自动化部署。
+代码提交后自动触发构建、单元测试、镜像打包、推送到 K8s 集群。
+部署效率从原先的小时级提升至分钟级。</p>
+</blockquote>
+<h3 id="34">3.4 效果数据示例<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>项目上线 6 个月后：
+- 系统可用性：99.95%（年宕机时间 &lt; 5 小时）
+- 平均响应时间：200ms 以内
+- 支持并发：日活 50 万、峰值 QPS 8000
+- 部署频率：从每月 1 次提升到每天 5 次
+- 故障恢复时间（MTTR）：从 30 分钟降至 5 分钟</p>
+</blockquote>
+<h3 id="35">3.5 反思与不足<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>微服务也带来了新的挑战：①运维复杂度上升 ②分布式事务难度大
+③服务间调用链路长，问题定位困难。后续我们将引入 Service Mesh（Istio）
+进一步降低业务代码的治理负担。</p>
+</blockquote>
+<hr />
+<h2 id="2atam">四、模板 2：软件架构评估（ATAM）<a class="headerlink" href="#2atam" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 适用题目<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<ul>
+<li>软件架构评估</li>
+<li>质量属性与架构权衡</li>
+<li>软件架构风格选择</li>
+<li>系统架构设计</li>
+</ul>
+<h3 id="42">4.2 理论要点<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p><strong>ATAM 定义</strong>：</p>
+<blockquote>
+<p>ATAM（Architecture Tradeoff Analysis Method，架构权衡分析方法）由
+SEI（卡内基梅隆软件工程研究所）提出，是一种基于场景的架构评估方法，
+通过分析多种质量属性间的权衡来评估架构方案。</p>
+</blockquote>
+<p><strong>ATAM 9 步骤</strong>（可选择性列举，建议讲 4-5 步即可）：
+1. 介绍 ATAM 方法
+2. 介绍商业目标
+3. 介绍待评估架构
+4. 识别架构方法（架构风格、模式）
+5. 生成质量属性效用树
+6. 分析架构方法
+7. 集体讨论场景并定优先级
+8. 再次分析架构方法
+9. 展示评估结果</p>
+<p><strong>4 大核心输出</strong>：
+- <strong>敏感点</strong>：影响单一质量属性的关键架构决策
+- <strong>权衡点</strong>：影响多个质量属性的关键架构决策
+- <strong>风险点</strong>：可能导致质量目标无法达成的决策
+- <strong>非风险点</strong>：经过验证的合理决策</p>
+<p><strong>6 大质量属性</strong>：
+- 性能、可用性、安全性、可修改性、可测试性、易用性</p>
+<h3 id="43">4.3 实践要点（论点）<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p><strong>论点 1：识别业务驱动与质量目标</strong></p>
+<blockquote>
+<p>项目启动后，我组织业务方、运营、研发等关键干系人召开 [X 场] 研讨会，
+识别出 6 大商业目标，包括 [日活百万级、可用性 99.99%、上线时间 6 个月]
+等。这些目标后续将转化为质量属性需求。</p>
+</blockquote>
+<p><strong>论点 2：构建质量属性效用树</strong></p>
+<blockquote>
+<p>基于商业目标，我带领团队构建效用树，将质量属性细化为可量化场景：
+- 性能：高峰期 P99 响应时间 ≤ 2 秒（H, M）
+- 可用性：单点故障 5 分钟内自动切换（H, L）
+- 安全性：敏感数据 AES-256 加密（H, L）
+- 可修改性：新增 API 不影响其他服务（M, M）
+其中 (H, M) 表示重要性高、实现难度中等。</p>
+</blockquote>
+<p><strong>论点 3：识别敏感点、权衡点</strong></p>
+<blockquote>
+<p>在分析架构方案时，我识别出若干关键决策：
+- <strong>敏感点</strong>：使用 Redis 集群作为缓存层（仅影响性能）
+- <strong>权衡点</strong>：选择强一致复制还是最终一致复制（影响一致性 vs 性能）
+- <strong>权衡点</strong>：选择同步调用还是异步消息（影响响应速度 vs 解耦）
+针对权衡点，我组织专题评审，最终决策时考虑业务诉求与技术成本。</p>
+</blockquote>
+<p><strong>论点 4：识别风险点并制定应对</strong></p>
+<blockquote>
+<p>通过评估，识别出 3 个主要风险点：
+1. 第三方支付接口稳定性未知 → 应对：增加本地降级策略
+2. 数据库分库分表后跨片查询性能未验证 → 应对：POC 验证 + 准备垂直拆分预案
+3. 团队首次使用 K8s，运维经验不足 → 应对：引入外部专家+内部培训</p>
+</blockquote>
+<p><strong>论点 5：场景驱动分析架构方法</strong></p>
+<blockquote>
+<p>针对 [大促秒杀] 场景，我分析了架构应对策略：
+- 性能：多级缓存（CDN + Redis + 本地）
+- 限流：Sentinel 实施流控
+- 削峰：消息队列异步处理订单
+- 降级：非核心功能降级（如评论、推荐）</p>
+</blockquote>
+<p><strong>论点 6：架构评估结论与改进</strong></p>
+<blockquote>
+<p>经过两轮 ATAM 评估，最终架构方案得到确认。改进点包括：
+① 增加熔断机制 ② 引入异地多活方案 ③ 完善监控告警
+评估报告获得高层认可，为项目顺利推进奠定基础。</p>
+</blockquote>
+<h3 id="44">4.4 效果数据<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>通过 ATAM 评估，提前识别 [X 个] 风险点并予以解决，避免上线后大规模返工。
+项目上线后各项质量指标均达成目标：可用性 99.97%、P99 响应时间 1.5 秒、
+重大事故 0 起。</p>
+</blockquote>
+<hr />
+<h2 id="3">五、模板 3：高可用 / 系统可靠性<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="51">5.1 适用题目<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<ul>
+<li>软件可靠性</li>
+<li>系统高可用设计</li>
+<li>Web 应用容错</li>
+<li>容灾备份</li>
+</ul>
+<h3 id="52">5.2 理论要点<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<p><strong>可靠性定义</strong>：</p>
+<blockquote>
+<p>软件可靠性是指在规定条件、规定时间内，软件不引起系统失效的能力，
+是衡量软件质量的关键指标之一。</p>
+</blockquote>
+<p><strong>核心度量</strong>：
+- <strong>MTBF</strong>（平均故障间隔时间）
+- <strong>MTTF</strong>（平均无故障时间）
+- <strong>MTTR</strong>（平均修复时间）
+- <strong>可用性 A = MTBF / (MTBF + MTTR)</strong></p>
+<p><strong>可用性等级</strong>：
+| 可用性 | 年宕机时间 | 等级 |
+|-------|----------|------|
+| 99% | 87.6 小时 | 2 个 9 |
+| 99.9% | 8.76 小时 | 3 个 9 |
+| 99.99% | 52.6 分钟 | 4 个 9 |
+| 99.999% | 5.26 分钟 | 5 个 9（电信级） |</p>
+<p><strong>可用性战术</strong>：错误检测、错误恢复、错误预防（参见质量属性章节）</p>
+<h3 id="53">5.3 实践要点<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<p><strong>论点 1：冗余设计</strong></p>
+<blockquote>
+<p>在硬件层面，所有关键服务采用 N+1 冗余部署：
+- 应用服务器：3 台以上集群
+- 数据库：一主两从 + MHA 自动切换
+- 缓存：Redis Sentinel 哨兵集群
+- 消息队列：3 节点 Kafka 集群</p>
+</blockquote>
+<p><strong>论点 2：故障检测</strong></p>
+<blockquote>
+<p>部署多层级健康检测机制：
+- 主机级：Zabbix 监控 CPU、内存、磁盘
+- 应用级：Spring Boot Actuator 暴露健康检查端点
+- 业务级：每分钟模拟核心业务流程
+- 心跳检测：服务每 5 秒上报状态到注册中心</p>
+</blockquote>
+<p><strong>论点 3：故障转移</strong></p>
+<blockquote>
+<p>实现自动故障转移：
+- 数据库：基于 MHA 实现主从切换，RTO &lt; 30 秒
+- 应用：通过负载均衡的健康检查自动剔除故障节点
+- 缓存：Redis Sentinel 自动选主，切换时间 &lt; 10 秒</p>
+</blockquote>
+<p><strong>论点 4：限流与熔断降级</strong></p>
+<blockquote>
+<p>引入 Sentinel 实现：
+- <strong>限流</strong>：单接口 QPS 阈值，超过则拒绝服务
+- <strong>熔断</strong>：依赖服务异常率超 50% 时熔断，60 秒后探测恢复
+- <strong>降级</strong>：非核心服务（如推荐、评论）在高负载下临时关闭</p>
+</blockquote>
+<p><strong>论点 5：异地多活</strong></p>
+<blockquote>
+<p>在两个地理区域部署完全独立的集群（北京 + 上海）：
+- 用户流量基于 GeoDNS 就近接入
+- 核心数据双向同步（基于 OGG / Otter）
+- 任一机房故障，5 分钟内切换流量到另一机房</p>
+</blockquote>
+<p><strong>论点 6：备份与恢复</strong></p>
+<blockquote>
+<p>实施 3-2-1 备份策略：
+- 3 份副本（生产 + 异地 + 冷备）
+- 2 种介质（磁盘 + 磁带/对象存储）
+- 1 份离线备份
+每月演练一次完整数据恢复，确保 RPO &lt; 5 分钟、RTO &lt; 30 分钟。</p>
+</blockquote>
+<p><strong>论点 7：监控告警</strong></p>
+<blockquote>
+<p>部署 Prometheus + Grafana 监控体系：
+- 关键指标实时展示
+- 多级告警（短信 → 电话 → 升级）
+- SLA 大盘对管理层可视化</p>
+</blockquote>
+<h3 id="54">5.4 效果数据<a class="headerlink" href="#54" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>经过一年运行：年可用性 99.99%（年宕机 &lt; 1 小时）；故障平均恢复时间从
+30 分钟降至 5 分钟；容灾演练每季度一次，均成功完成。</p>
+</blockquote>
+<hr />
+<h2 id="4">六、模板 4：数据架构设计<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1 适用题目<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<ul>
+<li>数据中台 / 数据架构</li>
+<li>数据分布存储 / 数据复制</li>
+<li>数据库设计与优化</li>
+<li>数据访问层设计</li>
+<li>大数据架构</li>
+</ul>
+<h3 id="62">6.2 理论要点<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<p><strong>数据架构定义</strong>：</p>
+<blockquote>
+<p>数据架构是企业数据资产的总体设计，包括数据模型、数据流、数据存储、
+数据集成与数据治理等方面，是企业架构（EA）的重要组成。</p>
+</blockquote>
+<p><strong>数据架构核心层次</strong>：
+1. <strong>数据采集层</strong>：日志、业务库、第三方数据
+2. <strong>数据存储层</strong>：ODS、DW、DM 层（数仓分层）
+3. <strong>数据计算层</strong>：批处理 + 流处理（Lambda/Kappa 架构）
+4. <strong>数据服务层</strong>：API、查询接口
+5. <strong>数据应用层</strong>：BI、报表、推荐、风控</p>
+<p><strong>OLTP vs OLAP</strong>：
+- OLTP：联机事务处理（高并发、规范化）
+- OLAP：联机分析处理（大数据量、反规范化、星型/雪花模型）</p>
+<p><strong>数据复制方式</strong>：
+- 同步复制 vs 异步复制
+- 基于日志（binlog）vs 基于触发器
+- 主主复制 vs 主从复制</p>
+<p><strong>CAP 与 BASE</strong>：分布式数据系统设计的理论基石</p>
+<h3 id="63">6.3 实践要点<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<p><strong>论点 1：分库分表</strong></p>
+<blockquote>
+<p>用户表数据量达到 10 亿级，单库无法支撑。我们按用户 ID 哈希分 32 库 1024 表，
+使用 ShardingSphere 中间件实现透明分片。配套设计：
+- 全局唯一 ID：雪花算法（Snowflake）
+- 跨库查询：禁止 JOIN，改为应用层组装
+- 跨库事务：Seata + TCC 模式</p>
+</blockquote>
+<p><strong>论点 2：读写分离</strong></p>
+<blockquote>
+<p>数据库部署为一主三从架构：
+- 写操作走主库
+- 读操作根据负载分发到从库
+- 通过 MyCat / ShardingSphere 实现路由
+注意主从延迟问题：关键读后写场景强制读主库。</p>
+</blockquote>
+<p><strong>论点 3：缓存设计</strong></p>
+<blockquote>
+<p>构建多级缓存架构：
+- L1：本地缓存（Caffeine），减少 Redis 压力
+- L2：分布式缓存（Redis Cluster），TB 级容量
+- L3：CDN 缓存静态资源
+命中率：L1 80% + L2 95% + L3 99%</p>
+</blockquote>
+<p><strong>论点 4：数据中台建设</strong></p>
+<blockquote>
+<p>按 OneData 方法论建设数据中台：
+- <strong>OneModel</strong>：统一数据模型（事实表 + 维度表）
+- <strong>OneID</strong>：用户/商品全域唯一标识
+- <strong>OneService</strong>：统一数据服务接口
+数据资产从分散的 N 套系统统一到中台，复用率提升 60%。</p>
+</blockquote>
+<p><strong>论点 5：数据仓库分层</strong></p>
+<blockquote>
+<p>数仓采用四层分层：
+- <strong>ODS</strong>（操作数据存储）：贴源层，原始数据
+- <strong>DWD</strong>（数据明细层）：清洗、规范化
+- <strong>DWS</strong>（数据汇总层）：按主题轻度汇总
+- <strong>ADS</strong>（应用数据层）：面向具体应用
+分层好处：解耦、复用、易维护。</p>
+</blockquote>
+<p><strong>论点 6：流批一体（Lambda → Kappa）</strong></p>
+<blockquote>
+<p>早期采用 Lambda 架构：批处理（Hive/Spark）+ 流处理（Flink），但维护两套
+代码成本高。后续演进为 Kappa 架构，统一使用 Flink 处理流与批，代码减少 50%。</p>
+</blockquote>
+<p><strong>论点 7：数据治理</strong></p>
+<blockquote>
+<p>建立数据治理体系：
+- 元数据管理（Atlas）
+- 数据血缘追踪
+- 数据质量监控（一致性、完整性、及时性）
+- 数据安全分级（公开、内部、机密、绝密）</p>
+</blockquote>
+<h3 id="64">6.4 效果数据<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>数据中台投产后：报表开发周期从 2 周缩短至 2 天；查询性能 P99 &lt; 3 秒；
+数据一致性问题下降 80%；存储成本节省 40%。</p>
+</blockquote>
+<hr />
+<h2 id="5">七、模板 5：信息安全架构<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="71">7.1 适用题目<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<ul>
+<li>信息安全架构</li>
+<li>系统安全</li>
+<li>数据安全</li>
+<li>网络安全</li>
+</ul>
+<h3 id="72">7.2 理论要点<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<p><strong>信息安全 CIA 三要素</strong>：
+- <strong>机密性</strong>（Confidentiality）：防止信息泄露
+- <strong>完整性</strong>（Integrity）：防止信息篡改
+- <strong>可用性</strong>（Availability）：保证服务可用</p>
+<p><strong>安全等级保护（等保 2.0）</strong>：5 个级别，金融政府类系统需达到三级以上</p>
+<p><strong>安全防护层次</strong>（纵深防御）：
+1. 物理层：机房安保、门禁
+2. 网络层：防火墙、IDS/IPS、DDoS 防护
+3. 主机层：堡垒机、HIDS、补丁管理
+4. 应用层：身份认证、权限控制、WAF
+5. 数据层：加密、脱敏、备份
+6. 管理层：安全制度、培训、应急响应</p>
+<h3 id="73">7.3 实践要点<a class="headerlink" href="#73" title="Permanent link">&para;</a></h3>
+<p><strong>论点 1：身份认证与授权</strong></p>
+<blockquote>
+<p>采用 OAuth 2.0 + JWT 的统一认证方案：
+- 用户登录后获取 JWT Token，包含身份与权限信息
+- 网关统一校验 Token 有效性
+- 基于 RBAC 模型实施细粒度权限控制
+- 关键操作（如转账）增加双因子认证（短信验证码 / U 盾）</p>
+</blockquote>
+<p><strong>论点 2：数据加密</strong></p>
+<blockquote>
+<p>数据加密策略：
+- 传输加密：全站 HTTPS（TLS 1.3），杜绝明文传输
+- 存储加密：敏感字段（手机号、身份证）使用 AES-256 加密
+- 密钥管理：基于 KMS（Key Management Service）统一托管
+- 国密合规：身份证号采用 SM4 国密算法</p>
+</blockquote>
+<p><strong>论点 3：防 SQL 注入与 XSS</strong></p>
+<blockquote>
+<p>通过多重防御：
+- 强制使用参数化查询（PreparedStatement），禁止字符串拼接
+- 框架层启用 ORM（MyBatis / Hibernate）防注入
+- 输入校验：白名单 + 黑名单
+- 输出转义：HTML/JS/URL 上下文不同转义策略
+- 部署 WAF（如阿里云 WAF）作为第一道防线</p>
+</blockquote>
+<p><strong>论点 4：防 CSRF 与会话劫持</strong></p>
+<blockquote>
+<ul>
+<li>所有变更操作要求携带 CSRF Token</li>
+<li>Cookie 设置 HttpOnly + Secure + SameSite</li>
+<li>关键操作要求二次验证</li>
+</ul>
+</blockquote>
+<p><strong>论点 5：日志审计</strong></p>
+<blockquote>
+<p>完善的审计日志：
+- 用户操作日志（谁、何时、做了什么）
+- 系统调用日志（API 调用链）
+- 安全事件日志（登录失败、权限拒绝）
+日志统一接入 SIEM（安全信息与事件管理）系统进行分析。</p>
+</blockquote>
+<p><strong>论点 6：DDoS 防护</strong></p>
+<blockquote>
+<p>多层防护：
+- 接入层：CDN + 高防 IP，吸收带宽攻击
+- 应用层：WAF + 限流（基于 IP/用户的 QPS 限制）
+- 数据层：连接池保护</p>
+</blockquote>
+<p><strong>论点 7：安全运营</strong></p>
+<blockquote>
+<p>建立 SOC（安全运营中心）：
+- 7×24 小时监控
+- 漏洞扫描（每周）+ 渗透测试（每季度）
+- 应急响应预案（一旦发现入侵，30 分钟内启动）
+- 安全意识培训（每季度全员培训）</p>
+</blockquote>
+<h3 id="74">7.4 效果数据<a class="headerlink" href="#74" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>系统通过等保三级认证；上线一年来未发生重大安全事故；
+拦截各类攻击 X 万次/天；漏洞修复率 100%（高危 24 小时内修复）。</p>
+</blockquote>
+<hr />
+<h2 id="6">八、模板 6：设计模式应用<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="81">8.1 适用题目<a class="headerlink" href="#81" title="Permanent link">&para;</a></h3>
+<ul>
+<li>设计模式</li>
+<li>架构风格</li>
+<li>软件设计</li>
+</ul>
+<h3 id="82">8.2 理论要点<a class="headerlink" href="#82" title="Permanent link">&para;</a></h3>
+<p><strong>设计模式定义</strong>：</p>
+<blockquote>
+<p>设计模式是软件设计中针对反复出现问题的可复用解决方案。GoF 23 种设计模式
+分为创建型（5）、结构型（7）、行为型（11）三类。</p>
+</blockquote>
+<p><strong>设计模式价值</strong>：
+- 提升代码可复用性
+- 提升可维护性
+- 标准化沟通词汇
+- 实现 SOLID 原则</p>
+<h3 id="83">8.3 实践要点（结合具体模式）<a class="headerlink" href="#83" title="Permanent link">&para;</a></h3>
+<p><strong>论点 1：策略模式 - 支付方式</strong></p>
+<blockquote>
+<p>系统支持微信、支付宝、银联、Apple Pay 等多种支付方式。我采用策略模式：
+- 抽象 PaymentStrategy 接口（pay 方法）
+- 各支付方式实现该接口
+- PaymentContext 持有 PaymentStrategy 引用，运行时根据用户选择切换
+新增支付方式只需实现接口，符合开闭原则。</p>
+</blockquote>
+<p><strong>论点 2：工厂方法 - 多通道消息</strong></p>
+<blockquote>
+<p>系统需要发送短信、邮件、推送、IM 等消息。使用工厂方法模式：
+- MessageFactory 抽象工厂
+- SmsFactory / EmailFactory / PushFactory 子类工厂
+- 客户端通过工厂获取具体 Message 实例
+不同通道发送细节被封装，调用方解耦。</p>
+</blockquote>
+<p><strong>论点 3：观察者模式 - 订单状态变更</strong></p>
+<blockquote>
+<p>订单状态变更需通知库存、物流、积分、消息等多个子系统。使用观察者模式：
+- OrderSubject 维护观察者列表
+- 各子系统实现 Observer 接口
+- 状态变更时自动通知所有订阅者
+实际项目中使用 Spring Event / RocketMQ 实现解耦。</p>
+</blockquote>
+<p><strong>论点 4：装饰器模式 - 日志增强</strong></p>
+<blockquote>
+<p>对核心业务方法需要增加日志、监控、限流等横切功能。使用装饰器模式：
+- 抽象 Service 接口
+- LoggingDecorator、MonitorDecorator 等包装类
+- 通过组合多个装饰器叠加功能
+Spring AOP 本质上就是动态代理 + 装饰器思想。</p>
+</blockquote>
+<p><strong>论点 5：责任链模式 - 审批流</strong></p>
+<blockquote>
+<p>报销审批根据金额走不同审批链。使用责任链模式：
+- Handler 抽象类，每个处理者持有 next 引用
+- 不同审批人（组长/经理/总监/CEO）按金额阈值处理或转下一级
+业务规则变更时只需调整链条结构。</p>
+</blockquote>
+<p><strong>论点 6：单例模式 - 配置中心</strong></p>
+<blockquote>
+<p>应用配置全局唯一，使用单例模式：
+- 双重检查锁定（Double-Checked Locking）实现线程安全
+- 配合 volatile 关键字防止指令重排
+- 在 Spring 容器中默认即为单例</p>
+</blockquote>
+<h3 id="84">8.4 效果数据<a class="headerlink" href="#84" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>通过设计模式应用：代码行数减少 30%；新增功能开发效率提升 40%；
+Bug 率降低 25%；模块复用率提升至 60%。</p>
+</blockquote>
+<hr />
+<h2 id="3-4">九、项目背景库（背 3-4 个，灵活套用）<a class="headerlink" href="#3-4" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">项目 1：电商平台（最通用）<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>2023 年 3 月-12 月，本人参与了 [XX 集团] 电商平台的微服务化改造项目。
+该平台原为单体架构，随着业务增长（日活 50 万、月 GMV 5 亿）暴露出
+部署慢、扩展难、可用性差等问题。新版本基于 Spring Cloud + 阿里云 ACK，
+拆分为 30+ 微服务，技术栈包括 Java 17、MySQL 8、Redis Cluster、
+RocketMQ、Kafka、Elasticsearch。项目历时 9 个月，团队 25 人，
+总投资 1500 万元。本人担任系统架构师，负责总体架构设计、技术选型、
+质量属性保障。</p>
+</blockquote>
+<p><strong>适用主题</strong>：微服务、SOA、Web 应用、数据架构、可靠性、安全</p>
+<h3 id="2">项目 2：金融业务系统<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>2022 年 6 月-2023 年 5 月，本人参与了 [XX 银行] 信贷管理系统升级项目。
+系统支持线上申贷、风控、放款、还款、催收等全流程。日均交易量 10 万笔，
+峰值并发 5000 QPS。技术栈：Java + Spring Cloud + Oracle + Redis + Kafka，
+部署在私有云。项目历时 12 个月，团队 30 人，投资 2000 万。本人担任
+系统架构师，负责整体架构与高可用设计。</p>
+</blockquote>
+<p><strong>适用主题</strong>：可靠性、安全、ATAM 评估、数据架构</p>
+<h3 id="3_1">项目 3：政务云平台<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>2021 年 9 月-2022 年 8 月，本人参与了 [XX 市政务服务] 一网通办平台建设。
+平台整合各委办局 200+ 业务系统，提供统一办事入口，覆盖事项 3000+ 项，
+服务市民 800 万。技术栈：微服务 + 中台架构 + 国密算法。项目历时 11 个月，
+团队 40 人，总投资 5000 万。本人担任架构师，负责数据治理与安全架构。</p>
+</blockquote>
+<p><strong>适用主题</strong>：企业集成、SOA、数据中台、安全</p>
+<h3 id="4_1">项目 4：物联网平台<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>2020 年 4 月-2021 年 3 月，本人参与了 [XX 制造企业] 工业互联网平台建设。
+平台连接生产线设备 1 万+ 台，实现设备监控、预测维护、生产优化。
+技术栈：MQTT + Kafka + Flink + InfluxDB + Spark。项目历时 11 个月，
+团队 20 人，投资 800 万。本人担任架构师，负责整体技术架构。</p>
+</blockquote>
+<p><strong>适用主题</strong>：嵌入式、物联网、数据架构、可靠性</p>
+<hr />
+<h2 id="_6">十、写作技巧与雷区<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="101">10.1 高分技巧<a class="headerlink" href="#101" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>结构清晰</strong>：使用小标题、编号，便于阅卷老师抓重点</li>
+<li><strong>数据具体</strong>：避免"大幅提升"，用"提升 50%"、"P99 &lt; 2 秒"</li>
+<li><strong>术语准确</strong>：用"权衡点"而非"妥协点"；用"敏感点"而非"关键点"</li>
+<li><strong>图文并茂</strong>：可在草稿纸先画架构图（虽然论文不要求画图，但有图思路更清）</li>
+<li><strong>关键词靠前</strong>：每段开头点出核心结论</li>
+<li><strong>量化对比</strong>：改造前 vs 改造后；同类方案对比</li>
+<li><strong>体现架构师视角</strong>：讲架构决策、权衡，<strong>不要写代码</strong></li>
+<li><strong>首尾呼应</strong>：摘要、引言、结尾保持论点一致</li>
+</ol>
+<h3 id="102">10.2 常见雷区（必避免）<a class="headerlink" href="#102" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>雷区</th>
+<th>后果</th>
+<th>正确做法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字数不够（&lt; 2000 字）</td>
+<td>直接低分</td>
+<td>提前练习字数把控</td>
+</tr>
+<tr>
+<td>无项目背景</td>
+<td>视为虚构，扣分</td>
+<td>必有项目+角色</td>
+</tr>
+<tr>
+<td>通篇理论无实践</td>
+<td>主题"假大空"</td>
+<td>实践占 50%+</td>
+</tr>
+<tr>
+<td>实践只讲代码细节</td>
+<td>偏离架构师身份</td>
+<td>讲架构决策</td>
+</tr>
+<tr>
+<td>论点与主题不符</td>
+<td>偏题</td>
+<td>严格扣题写论点</td>
+</tr>
+<tr>
+<td>只讲优点不讲不足</td>
+<td>不够客观</td>
+<td>适当反思</td>
+</tr>
+<tr>
+<td>字迹潦草、涂改多</td>
+<td>印象分扣分</td>
+<td>答题前打腹稿</td>
+</tr>
+<tr>
+<td>引用不符合题目背景的项目</td>
+<td>张冠李戴</td>
+<td>项目须匹配主题</td>
+</tr>
+<tr>
+<td>时间分配不当</td>
+<td>写不完</td>
+<td>30 分钟构思+85 分钟写+5 分钟检查</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-120">10.3 时间分配（120 分钟）<a class="headerlink" href="#103-120" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>时长</th>
+<th>任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选题</td>
+<td>5 分钟</td>
+<td>4 选 1，挑最有把握的</td>
+</tr>
+<tr>
+<td>构思</td>
+<td>25 分钟</td>
+<td>列大纲、确定 4-5 个论点、关联项目</td>
+</tr>
+<tr>
+<td>写摘要</td>
+<td>10 分钟</td>
+<td>300-350 字精修</td>
+</tr>
+<tr>
+<td>写正文</td>
+<td>70 分钟</td>
+<td>4 段，平均 15-20 分钟/段</td>
+</tr>
+<tr>
+<td>检查</td>
+<td>10 分钟</td>
+<td>通读、改错字、补漏</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7">十一、考前 7 天论文冲刺<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="d-7-d-5">D-7 至 D-5：模板熟练度<a class="headerlink" href="#d-7-d-5" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 微服务模板（4-5 个论点）默写一遍</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 架构评估模板默写一遍</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 高可用模板默写一遍</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 选定 2-3 个项目背景，背熟（规模、工期、技术栈）</li>
+</ul>
+<h3 id="d-4-d-3">D-4 至 D-3：扩充模板<a class="headerlink" href="#d-4-d-3" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 数据架构模板</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 安全架构模板</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 设计模式模板（备选）</li>
+</ul>
+<h3 id="d-2">D-2：模拟训练<a class="headerlink" href="#d-2" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 限时 120 分钟，写一篇完整论文</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 字数控制在 2500-3000 字</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 找老师/同学批改</li>
+</ul>
+<h3 id="d-1">D-1：背诵关键内容<a class="headerlink" href="#d-1" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 摘要黄金模板（300 字）</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 4 大主题各 5 个论点</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 各种术语缩写（ATAM、SOA、CAP、SLA、SLI、SLO、RPO、RTO 等）</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 量化数据示例（可用性 99.99%、P99 2 秒等）</li>
+</ul>
+<h3 id="_7">考试当天提示<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>浏览 4 个题目时，先看是否有微服务/可靠性/数据/安全相关</li>
+<li>选最熟悉的题目，避免"看似简单实则陷阱"的偏门题</li>
+<li>摘要决定第一印象，<strong>先写摘要骨架，正文写完再回填</strong></li>
+<li><strong>一定要写到 2500 字以上</strong>，字数不够直接判低分</li>
+<li>字迹工整&gt;速度快，宁可少写 100 字也别写得潦草</li>
+</ul>
+<hr />
+<h2 id="_8">十二、必背通用素材库<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="121">12.1 万能开头句式<a class="headerlink" href="#121" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"随着 [行业/技术] 的快速发展，[传统方案] 暴露出 [痛点]，[新方案] 应运而生。"</li>
+<li>"在数字化转型背景下，企业对 [质量属性] 提出更高要求。"</li>
+<li>"本文以 [项目名称] 为例，结合本人 [架构师] 实践，论述 [主题]。"</li>
+</ul>
+<h3 id="122">12.2 万能过渡句<a class="headerlink" href="#122" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"基于上述分析，我们决定采用..."</li>
+<li>"为解决这一问题，团队经过充分讨论，最终选择..."</li>
+<li>"在落地过程中，我们发现..."</li>
+<li>"经过 [量化数据] 的验证..."</li>
+</ul>
+<h3 id="123">12.3 万能结尾句<a class="headerlink" href="#123" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"通过本项目，本人深刻认识到，架构设计需要在 [质量属性 A] 与 [质量属性 B] 间寻求最佳平衡。"</li>
+<li>"未来，我们将持续优化 [方面]，引入 [新技术] 进一步提升系统能力。"</li>
+<li>"架构没有银弹，唯有结合业务实际、不断演进，方能持续创造价值。"</li>
+</ul>
+<h3 id="124">12.4 必背专业术语缩写<a class="headerlink" href="#124" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>缩写</th>
+<th>全称</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATAM</td>
+<td>Architecture Tradeoff Analysis Method</td>
+<td>架构权衡分析方法</td>
+</tr>
+<tr>
+<td>SAAM</td>
+<td>Software Architecture Analysis Method</td>
+<td>软件架构分析方法</td>
+</tr>
+<tr>
+<td>CBAM</td>
+<td>Cost-Benefit Analysis Method</td>
+<td>成本效益分析方法</td>
+</tr>
+<tr>
+<td>ABSD</td>
+<td>Architecture-Based Software Design</td>
+<td>基于体系结构的软件设计</td>
+</tr>
+<tr>
+<td>DSSA</td>
+<td>Domain-Specific Software Architecture</td>
+<td>特定领域软件架构</td>
+</tr>
+<tr>
+<td>DDD</td>
+<td>Domain-Driven Design</td>
+<td>领域驱动设计</td>
+</tr>
+<tr>
+<td>SOA</td>
+<td>Service-Oriented Architecture</td>
+<td>面向服务架构</td>
+</tr>
+<tr>
+<td>ESB</td>
+<td>Enterprise Service Bus</td>
+<td>企业服务总线</td>
+</tr>
+<tr>
+<td>EAI</td>
+<td>Enterprise Application Integration</td>
+<td>企业应用集成</td>
+</tr>
+<tr>
+<td>MSA</td>
+<td>Microservices Architecture</td>
+<td>微服务架构</td>
+</tr>
+<tr>
+<td>CQRS</td>
+<td>Command Query Responsibility Segregation</td>
+<td>命令查询职责分离</td>
+</tr>
+<tr>
+<td>CAP</td>
+<td>Consistency/Availability/Partition</td>
+<td>一致性/可用性/分区容忍</td>
+</tr>
+<tr>
+<td>BASE</td>
+<td>Basically Available, Soft state, Eventually consistent</td>
+<td>基本可用/软状态/最终一致</td>
+</tr>
+<tr>
+<td>TPS</td>
+<td>Transactions Per Second</td>
+<td>每秒事务数</td>
+</tr>
+<tr>
+<td>QPS</td>
+<td>Queries Per Second</td>
+<td>每秒查询数</td>
+</tr>
+<tr>
+<td>SLA</td>
+<td>Service Level Agreement</td>
+<td>服务等级协议</td>
+</tr>
+<tr>
+<td>SLO</td>
+<td>Service Level Objective</td>
+<td>服务等级目标</td>
+</tr>
+<tr>
+<td>SLI</td>
+<td>Service Level Indicator</td>
+<td>服务等级指标</td>
+</tr>
+<tr>
+<td>RPO</td>
+<td>Recovery Point Objective</td>
+<td>恢复点目标（数据丢失量）</td>
+</tr>
+<tr>
+<td>RTO</td>
+<td>Recovery Time Objective</td>
+<td>恢复时间目标</td>
+</tr>
+<tr>
+<td>MTBF</td>
+<td>Mean Time Between Failures</td>
+<td>平均故障间隔</td>
+</tr>
+<tr>
+<td>MTTF</td>
+<td>Mean Time To Failure</td>
+<td>平均无故障时间</td>
+</tr>
+<tr>
+<td>MTTR</td>
+<td>Mean Time To Recovery</td>
+<td>平均修复时间</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>Continuous Integration/Continuous Delivery</td>
+<td>持续集成/持续交付</td>
+</tr>
+<tr>
+<td>KMS</td>
+<td>Key Management Service</td>
+<td>密钥管理服务</td>
+</tr>
+<tr>
+<td>WAF</td>
+<td>Web Application Firewall</td>
+<td>Web 应用防火墙</td>
+</tr>
+<tr>
+<td>IDS/IPS</td>
+<td>Intrusion Detection/Prevention System</td>
+<td>入侵检测/防御系统</td>
+</tr>
+<tr>
+<td>OAuth</td>
+<td>Open Authorization</td>
+<td>开放授权</td>
+</tr>
+<tr>
+<td>JWT</td>
+<td>JSON Web Token</td>
+<td>JSON 网络令牌</td>
+</tr>
+<tr>
+<td>RBAC</td>
+<td>Role-Based Access Control</td>
+<td>基于角色的访问控制</td>
+</tr>
+</tbody>
+</table>
+<h3 id="125">12.5 量化指标参考值<a class="headerlink" href="#125" title="Permanent link">&para;</a></h3>
+<p><strong>性能指标</strong>：
+- P99 响应时间 &lt; 2 秒
+- 平均响应时间 &lt; 200 ms
+- 系统吞吐量：10000 TPS、5000 QPS
+- 数据库 QPS：3000 写 / 10000 读
+- 缓存命中率 &gt; 95%</p>
+<p><strong>可用性指标</strong>：
+- 4 个 9（99.99%）= 年宕机 &lt; 53 分钟
+- 5 个 9（99.999%）= 年宕机 &lt; 5 分钟
+- 故障切换时间 &lt; 30 秒（数据库）/ 5 分钟（机房）
+- RPO &lt; 1 分钟（数据丢失）/ RTO &lt; 10 分钟（恢复）</p>
+<p><strong>规模指标</strong>：
+- 用户量：日活百万、月活千万
+- 数据量：用户表 10 亿行、日志 TB 级
+- 微服务数：30-100 个
+- 容器规模：100-1000 个 Pod
+- 团队规模：20-50 人</p>
+<hr />
+<h2 id="_9">十三、近年热点论文补充模板<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>以下主题适合与已有项目背景组合使用。写作时不要只讲技术名词，要突出：<strong>为什么选、怎么落地、解决了什么质量属性问题、效果如何量化</strong>。</p>
+</blockquote>
+<h3 id="131-serverless">13.1 Serverless 架构<a class="headerlink" href="#131-serverless" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- Serverless 架构模式
+- 云原生环境下的弹性架构设计
+- 降本增效与自动伸缩架构设计</p>
+<p><strong>理论要点</strong>：
+Serverless 是一种云计算执行模型，开发者只需关注函数和业务逻辑，服务器管理、弹性伸缩、运行环境由云平台负责。典型组成包括函数计算 FaaS、后端服务 BaaS、API 网关、事件源和监控系统。</p>
+<p><strong>实践论点</strong>：
+1. <strong>事件驱动拆分</strong>：将图片处理、订单超时关闭、消息通知等非核心同步流程拆成函数，由 HTTP、MQ、对象存储、定时器触发。
+2. <strong>状态外置</strong>：函数保持无状态，将会话、任务状态、业务数据放入 Redis、数据库或对象存储。
+3. <strong>弹性伸缩</strong>：大促期间按请求量自动扩容，平峰期自动缩容，降低资源空置。
+4. <strong>冷启动优化</strong>：对核心接口配置预留实例，精简依赖包，避免函数过大。
+5. <strong>可观测性建设</strong>：接入日志、指标、链路追踪，解决函数调用链分散导致的定位困难。
+6. <strong>厂商锁定控制</strong>：业务代码与云厂商 SDK 隔离，事件格式统一封装。</p>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>改造后，图片处理任务平均耗时从 8 秒降至 3 秒；峰值期间自动扩容至 300 个并发实例；闲时资源成本下降 40%；非核心任务失败可自动重试，人工运维投入减少 50%。</p>
+</blockquote>
+<p><strong>反思</strong>：</p>
+<blockquote>
+<p>Serverless 适合事件驱动和突发流量场景，但对长事务、强状态、低延迟核心链路并不一定合适。后续将结合容器服务与函数计算形成混合架构。</p>
+</blockquote>
+<h3 id="132">13.2 云原生数据库 / 存算分离<a class="headerlink" href="#132" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 基于云原生数据库的企业信息系统架构设计
+- 数据库弹性扩展与高可用设计
+- 企业系统数据层云原生改造</p>
+<p><strong>理论要点</strong>：
+云原生数据库面向云环境设计，强调分布式、高可用、弹性伸缩和自动运维。存算分离将计算节点和存储节点解耦，使计算资源可按业务压力独立扩缩容，存储层通过多副本或分布式存储保障可靠性。</p>
+<p><strong>实践论点</strong>：
+1. <strong>分层改造</strong>：应用层通过数据访问网关接入，屏蔽底层数据库差异。
+2. <strong>存算分离</strong>：计算节点无状态化，按读写压力动态扩容；存储层采用多副本保证可靠性。
+3. <strong>读写分离</strong>：交易写入主节点，报表和查询走只读副本，降低主库压力。
+4. <strong>高可用与容灾</strong>：跨可用区部署，自动故障转移，定期恢复演练。
+5. <strong>性能治理</strong>：慢 SQL 治理、索引优化、连接池控制、热点数据缓存。
+6. <strong>成本控制</strong>：按业务峰谷设置弹性策略，配置成本监控和容量预警。</p>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>改造后，数据库扩容时间从 2 天缩短到 10 分钟；核心交易 P99 响应时间稳定在 1.5 秒以内；月度运维工单减少 60%；跨可用区容灾演练 RTO 控制在 10 分钟内。</p>
+</blockquote>
+<h3 id="133">13.3 软件系统性能测试与优化<a class="headerlink" href="#133" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 软件系统性能测试
+- 高并发系统性能优化
+- Web 系统性能保障</p>
+<p><strong>理论要点</strong>：
+性能测试用于验证系统在特定负载下的响应时间、吞吐量、资源利用率和稳定性。常见类型包括负载测试、压力测试、容量测试和稳定性测试，关键指标包括平均响应时间、P95/P99、TPS/QPS、错误率、CPU/内存/IO 使用率。</p>
+<p><strong>实践论点</strong>：
+1. <strong>明确性能目标</strong>：与业务方确认峰值并发、响应时间、吞吐量、错误率等指标。
+2. <strong>构建测试模型</strong>：根据真实业务占比设计登录、查询、下单、支付等混合场景。
+3. <strong>搭建压测环境</strong>：保证环境配置、数据规模、网络拓扑尽量接近生产。
+4. <strong>定位瓶颈</strong>：通过 APM、慢 SQL、线程池、GC、系统资源监控逐层分析。
+5. <strong>分层优化</strong>：CDN、缓存、异步消息、连接池、索引优化、读写分离、水平扩展。
+6. <strong>回归验证</strong>：每次优化后重新压测，形成基线报告和容量规划。</p>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>优化后，首页 P99 响应时间从 3.2 秒降至 1.1 秒；系统最大 TPS 从 3000 提升至 9000；数据库 CPU 峰值从 90% 降至 55%；压测发现的 12 个瓶颈均在上线前关闭。</p>
+</blockquote>
+<h3 id="134">13.4 信创 / 国产化适配架构<a class="headerlink" href="#134" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 自主可控环境下的信息系统架构设计
+- 国产化软硬件适配
+- 关键行业系统迁移改造</p>
+<p><strong>理论要点</strong>：
+信创架构强调关键软硬件自主可控，通常涉及 CPU、操作系统、数据库、中间件、密码算法和办公生态的国产化替换。架构师需要在兼容性、性能、安全、迁移风险之间进行权衡。</p>
+<p><strong>实践论点</strong>：
+1. <strong>现状梳理</strong>：识别操作系统、数据库、中间件、第三方组件和外部接口依赖。
+2. <strong>兼容性适配</strong>：处理 SQL 方言、驱动、字符集、文件路径、系统调用等差异。
+3. <strong>分阶段迁移</strong>：先外围系统，后核心系统；先读业务，后写业务。
+4. <strong>双轨验证</strong>：新旧环境并行运行，进行数据一致性比对和性能基准测试。
+5. <strong>安全合规</strong>：引入国密算法、日志审计、访问控制和等保要求。
+6. <strong>回退预案</strong>：灰度发布，保留数据备份和快速回切方案。</p>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>通过分阶段迁移，系统完成 120 张核心表和 35 个接口的国产化适配；核心交易成功率保持 99.99%；性能压测达到原系统 95% 以上；项目通过等保测评和用户验收。</p>
+</blockquote>
+<h3 id="135">13.5 秒杀 / 高并发场景架构<a class="headerlink" href="#135" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 秒杀场景及其技术解决方案
+- 高并发系统架构设计
+- 互联网业务削峰与限流设计</p>
+<p><strong>理论要点</strong>：
+秒杀系统的核心矛盾是瞬时高并发与有限库存之间的冲突，设计目标是保护系统稳定、保证库存一致性、提升用户体验。常用方案包括静态化、CDN、多级缓存、限流、排队、异步削峰、库存预扣和服务降级。</p>
+<p><strong>实践论点</strong>：
+1. <strong>流量隔离</strong>：秒杀活动独立域名、独立服务、独立数据库表，避免影响主站。
+2. <strong>页面静态化</strong>：活动页静态化并推送 CDN，减少源站压力。
+3. <strong>多级限流</strong>：网关按 IP/用户限流，应用按接口限流，库存售罄快速失败。
+4. <strong>缓存与预热</strong>：秒杀商品、库存、活动配置提前加载到 Redis。
+5. <strong>异步削峰</strong>：请求进入消息队列，后端异步创建订单。
+6. <strong>库存一致性</strong>：Redis 原子扣减 + 数据库最终确认，失败补偿回滚库存。
+7. <strong>降级与熔断</strong>：关闭推荐、评论等非核心功能，保障下单链路。</p>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>秒杀活动峰值 QPS 达 5 万，核心下单链路 P99 控制在 800ms 内；库存超卖为 0；非核心服务降级后主链路可用性达到 99.99%；活动期间无重大故障。</p>
+</blockquote>
+<h3 id="136">13.6 系统规划 / 企业架构（兜底模板）<a class="headerlink" href="#136" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 企业级信息系统规划与架构设计
+- 数字化转型背景下的企业架构建设
+- 业务架构、应用架构、数据架构、技术架构协同设计</p>
+<p><strong>理论要点</strong>：
+企业架构（EA）强调从战略到落地的全局一致性，常见方法包括 BSP 和 TOGAF ADM。核心是把业务能力、应用系统、数据资产和技术底座打通，形成可演进的蓝图和治理机制。</p>
+<p><strong>实践论点</strong>：
+1. <strong>现状评估</strong>：梳理业务流程、系统清单、数据资产和技术栈，识别烟囱系统与重复建设。
+2. <strong>目标蓝图</strong>：按业务/应用/数据/技术四层设计目标架构，明确主数据与关键接口。
+3. <strong>分阶段迁移</strong>：制定项目路线图，先做高价值、低风险域，逐步推进核心系统重构。
+4. <strong>治理机制</strong>：建立架构评审、技术选型标准、接口规范、数据标准和变更流程。
+5. <strong>度量闭环</strong>：以交付周期、系统复用率、接口复用率、故障率等指标持续评估。</p>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>通过企业架构治理，重复建设系统减少 30%；跨部门流程时长缩短 40%；应用复用率提升到 55%；核心系统交付周期从 6 个月缩短到 3.5 个月。</p>
+</blockquote>
+<h3 id="137">13.7 架构演化与治理（兜底模板）<a class="headerlink" href="#137" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 软件架构演化与持续治理
+- 技术债治理与架构腐蚀防控
+- 大型系统长期演进中的一致性与可维护性</p>
+<p><strong>理论要点</strong>：
+架构演化是系统适应业务变化的持续过程，治理目标是避免架构腐蚀。常用抓手包括 ADR（架构决策记录）、架构评审、质量门禁、技术债台账和可观测性体系。</p>
+<p><strong>实践论点</strong>：
+1. <strong>识别演化驱动</strong>：明确业务增长、性能瓶颈、合规要求等触发因素。
+2. <strong>决策留痕</strong>：关键技术选型沉淀 ADR，记录背景、备选方案、权衡和结论。
+3. <strong>治理流程</strong>：设立架构评审节点，将非功能需求纳入迭代验收标准。
+4. <strong>技术债管理</strong>：按影响和紧急度分级，纳入版本计划持续偿还。
+5. <strong>运行度量</strong>：用变更失败率、平均恢复时间、模块耦合度、重复代码率跟踪演化效果。</p>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>建立架构治理机制后，重大线上故障数下降 50%；变更失败率从 18% 降至 7%；平均恢复时间由 45 分钟降至 15 分钟；技术债清偿率季度提升 20%。</p>
+</blockquote>
+<hr />
+<h2 id="11_1">十四、11 大主题论文模板归纳速查<a class="headerlink" href="#11_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>核心理论</th>
+<th>必备论点</th>
+<th>数据指标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>微服务</strong></td>
+<td>单一职责/独立部署/去中心化</td>
+<td>拆分、通信、注册、配置、网关、事务、监控、CI/CD</td>
+<td>TPS/QPS/部署频率</td>
+</tr>
+<tr>
+<td><strong>架构评估</strong></td>
+<td>ATAM 9步/4 种点/效用树</td>
+<td>商业目标、效用树、敏感点、权衡点、风险点、改进</td>
+<td>风险减少 X 个</td>
+</tr>
+<tr>
+<td><strong>高可用</strong></td>
+<td>MTBF/MTTR/可用性公式</td>
+<td>冗余、检测、转移、限流降级、多活、备份、监控</td>
+<td>99.99%、宕机 &lt; X 分</td>
+</tr>
+<tr>
+<td><strong>数据架构</strong></td>
+<td>OLTP/OLAP/Lambda/Kappa</td>
+<td>分库分表、读写分离、缓存、中台、数仓分层、流批</td>
+<td>查询时延、复用率</td>
+</tr>
+<tr>
+<td><strong>安全架构</strong></td>
+<td>CIA/等保/纵深防御</td>
+<td>认证授权、加密、防注入、CSRF、审计、DDoS、运营</td>
+<td>攻击拦截数、漏洞修复率</td>
+</tr>
+<tr>
+<td><strong>设计模式</strong></td>
+<td>GoF 23 种</td>
+<td>策略、工厂、观察者、装饰器、责任链、单例</td>
+<td>代码减少%、效率提升%</td>
+</tr>
+<tr>
+<td><strong>Serverless</strong></td>
+<td>事件驱动/FaaS/BaaS</td>
+<td>函数拆分、状态外置、弹性、冷启动、监控</td>
+<td>成本下降、扩容速度</td>
+</tr>
+<tr>
+<td><strong>性能优化</strong></td>
+<td>负载/压力/容量/稳定性测试</td>
+<td>目标、模型、压测、瓶颈、分层优化</td>
+<td>P99、TPS、错误率</td>
+</tr>
+<tr>
+<td><strong>信创适配</strong></td>
+<td>自主可控/兼容迁移</td>
+<td>依赖梳理、适配、迁移、验证、合规</td>
+<td>兼容率、性能达标率</td>
+</tr>
+<tr>
+<td><strong>企业架构</strong></td>
+<td>BSP/TOGAF/四层架构</td>
+<td>蓝图设计、分阶段迁移、治理机制、标准统一</td>
+<td>复用率、交付周期</td>
+</tr>
+<tr>
+<td><strong>架构治理</strong></td>
+<td>ADR/评审/技术债治理</td>
+<td>决策留痕、质量门禁、债务偿还、度量闭环</td>
+<td>失败率、MTTR、故障数</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_10">十五、查漏补缺论文补强模板<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>针对历年真题中<strong>易考但模板缺失</strong>的主题补强，重点扩展架构演化、企业架构、数字化转型、AOP 等可能出现的题目。</p>
+</blockquote>
+<h3 id="151-aop-2019">15.1 AOP / 面向方面编程论文模板（2019 真题）<a class="headerlink" href="#151-aop-2019" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 面向方面编程（AOP）在 XX 中的应用
+- 横切关注点的设计与实现
+- 系统中的事务/日志/安全统一管理</p>
+<p><strong>理论要点</strong>：</p>
+<blockquote>
+<p>面向方面编程 AOP（Aspect-Oriented Programming）是面向对象编程 OOP 的补充，旨在将日志、事务、安全、监控等横切关注点（Cross-Cutting Concerns）从核心业务逻辑中分离，通过切面（Aspect）的模块化提升代码内聚性。AOP 的核心概念包括连接点（Join Point）、切入点（Pointcut）、通知（Advice）、切面（Aspect）和织入（Weaving）。</p>
+</blockquote>
+<p><strong>实践要点</strong>：</p>
+<p><strong>论点 1：识别横切关注点</strong></p>
+<blockquote>
+<p>项目初期，通过代码审查发现日志、事务、权限校验、性能监控等代码散落在 200+ 个业务方法中，单是日志代码就占总代码量 15%。我组织团队梳理出<strong>五大横切关注点</strong>：日志记录、事务管理、权限校验、性能监控、异常处理。</p>
+</blockquote>
+<p><strong>论点 2：切面设计</strong></p>
+<blockquote>
+<p>针对每个关注点设计独立切面：
+- <strong>LoggingAspect</strong>：记录方法入参、出参、耗时
+- <strong>TransactionAspect</strong>：声明式事务（@Transactional）
+- <strong>SecurityAspect</strong>：基于注解的权限校验（@RequireRole）
+- <strong>MonitorAspect</strong>：埋点上报 Prometheus
+- <strong>ExceptionAspect</strong>：统一异常处理与告警</p>
+</blockquote>
+<p><strong>论点 3：切入点表达式</strong></p>
+<blockquote>
+<p>使用 AspectJ 表达式精确匹配连接点：
+<code>execution(* com.xx.service.*.*(..))   // service 包下所有方法
+@annotation(com.xx.RequireRole)        // 标注注解的方法
+within(com.xx.controller..*)           // 包内所有类</code></p>
+</blockquote>
+<p><strong>论点 4：通知类型选择</strong></p>
+<blockquote>
+<ul>
+<li><strong>@Before</strong>：权限校验（前置拒绝）</li>
+<li><strong>@AfterReturning</strong>：成功日志</li>
+<li><strong>@AfterThrowing</strong>：异常告警</li>
+<li><strong>@Around</strong>：性能监控（前后计时）</li>
+<li><strong>@After</strong>：资源清理</li>
+</ul>
+</blockquote>
+<p><strong>论点 5：织入方式选型</strong></p>
+<blockquote>
+<p>选择 Spring AOP（<strong>运行时织入</strong>，基于 JDK 动态代理 + CGLIB），原因：
+- 无需修改字节码，部署简单
+- 与 Spring 容器无缝集成
+- 性能开销可接受（5% 以内）
+对性能敏感模块可选 AspectJ 编译时织入。</p>
+</blockquote>
+<p><strong>论点 6：与设计模式的关系</strong></p>
+<blockquote>
+<p>AOP 本质上是<strong>代理模式 + 装饰器模式</strong>的工程化应用。Spring AOP 通过动态代理在运行时为目标对象生成代理类，在方法调用前后织入通知逻辑。</p>
+</blockquote>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>AOP 改造后：业务代码量减少 18%；日志接入新模块从 2 人天降至 0.5 人天；权限漏洞下降 80%（统一拦截）；性能监控覆盖率从 30% 提升至 100%。</p>
+</blockquote>
+<p><strong>反思</strong>：</p>
+<blockquote>
+<p>AOP 虽然提升了内聚性，但也带来调试困难（堆栈变长）、织入性能开销等问题。后续我们将通过链路追踪（SkyWalking）增强可观测性，避免"AOP 黑盒化"。</p>
+</blockquote>
+<hr />
+<h3 id="152">15.2 软件架构演化与治理论文模板（扩展版）<a class="headerlink" href="#152" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 软件架构演化与持续治理
+- 大型系统长期演进中的架构治理
+- 技术债与架构腐蚀的应对策略</p>
+<p><strong>理论要点</strong>：</p>
+<blockquote>
+<p>软件架构演化是系统随业务、技术、组织变化而持续调整的过程。若缺乏治理，将出现<strong>架构腐蚀</strong>（实现偏离设计）、<strong>技术债</strong>（短期权衡的长期成本）等问题。架构治理通过 ADR（架构决策记录）、架构评审、质量门禁、技术债台账、运行度量等机制保障一致性。</p>
+</blockquote>
+<p><strong>实践要点</strong>：</p>
+<p><strong>论点 1：识别演化驱动力</strong></p>
+<blockquote>
+<p>经过半年代码审计与生产事故复盘，识别出 4 类演化驱动力：
+- <strong>业务驱动</strong>：日活从 50 万→500 万，单体架构承载不住
+- <strong>技术驱动</strong>：Spring 4 升级 Spring Boot 3，JDK 8 升级 JDK 17
+- <strong>合规驱动</strong>：等保 2.0 三级认证要求，国密改造
+- <strong>质量驱动</strong>：MTTR 从 5 分钟劣化到 30 分钟</p>
+</blockquote>
+<p><strong>论点 2：建立 ADR 决策留痕机制</strong></p>
+<blockquote>
+<p>推行 Architecture Decision Record，每条关键决策记录：
+- <strong>背景</strong>：为什么需要决策
+- <strong>备选方案</strong>：列举 2-3 个候选
+- <strong>决策结果</strong>：选择哪个，关键依据
+- <strong>权衡取舍</strong>：放弃了什么
+- <strong>后果</strong>：预期影响范围
+半年内沉淀 ADR 60+ 条，新人快速理解历史决策，避免重复争论。</p>
+</blockquote>
+<p><strong>论点 3：架构评审机制</strong></p>
+<blockquote>
+<p>设立<strong>三级评审</strong>：
+- <strong>L1 模块评审</strong>：模块负责人，每次迭代
+- <strong>L2 域评审</strong>：技术总监，每月一次
+- <strong>L3 集团评审</strong>：CTO 主持，重大架构调整必经
+评审 checklist 包含：是否符合分层规范、是否引入新中间件、是否影响 SLO、是否产生技术债等。</p>
+</blockquote>
+<p><strong>论点 4：技术债台账与偿还</strong></p>
+<blockquote>
+<p>建立技术债台账，按"影响范围 × 修复成本"四象限分级：
+- <strong>高影响低成本</strong>：本迭代立即修
+- <strong>高影响高成本</strong>：列入版本计划
+- <strong>低影响低成本</strong>：随手修
+- <strong>低影响高成本</strong>：暂缓
+强制每个 Sprint 投入 20% 工时偿还技术债。</p>
+</blockquote>
+<p><strong>论点 5：质量门禁与自动化</strong></p>
+<blockquote>
+<p>CI/CD 流水线集成质量门禁：
+- 静态扫描（SonarQube）：覆盖率 ≥ 70%、严重漏洞 = 0
+- 依赖检查：禁止引入低版本 / 高漏洞依赖
+- 架构守护（ArchUnit）：禁止跨层调用、禁止循环依赖
+- 性能基线：核心接口 P99 不得劣化超 10%</p>
+</blockquote>
+<p><strong>论点 6：运行度量与闭环</strong></p>
+<blockquote>
+<p>用 5 大指标监控架构健康度：
+- <strong>变更失败率</strong>：&lt; 10%
+- <strong>MTTR</strong>：&lt; 15 分钟
+- <strong>重复代码率</strong>：&lt; 8%
+- <strong>模块耦合度</strong>：循环依赖 = 0
+- <strong>技术债清偿率</strong>：季度 ≥ 20%</p>
+</blockquote>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>治理一年后：变更失败率从 18% 降至 6%；MTTR 从 45 分钟降至 12 分钟；重大故障从季度 3 起降至 1 起；技术债存量减少 35%；ADR 沉淀 120 条，新人上手时间从 4 周缩至 2 周。</p>
+</blockquote>
+<hr />
+<h3 id="153-togaf">15.3 企业架构（TOGAF）论文模板（扩展版）<a class="headerlink" href="#153-togaf" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 企业信息系统规划与架构设计
+- 数字化转型背景下的企业架构建设
+- 业务/应用/数据/技术四层架构协同</p>
+<p><strong>理论要点</strong>：</p>
+<blockquote>
+<p>企业架构 EA（Enterprise Architecture）是企业战略到 IT 落地的全局蓝图，包含业务架构、应用架构、数据架构、技术架构四个层次。TOGAF（The Open Group Architecture Framework）提供了 ADM（架构开发方法）作为迭代式架构开发流程。</p>
+</blockquote>
+<p><strong>实践要点</strong>：</p>
+<p><strong>论点 1：架构愿景与商业目标对齐</strong></p>
+<blockquote>
+<p>启动阶段，组织 CEO、CIO、业务负责人共 15 人召开战略对齐会，识别 3 大商业目标：
+- 3 年内业务在线化率 ≥ 80%
+- 跨部门流程时长缩短 50%
+- IT 重复投资减少 40%
+据此提出"双中台 + 微服务"目标架构愿景。</p>
+</blockquote>
+<p><strong>论点 2：业务架构设计</strong></p>
+<blockquote>
+<p>用业务能力图（Business Capability Map）梳理 5 大一级能力、25 个二级能力：
+- 营销、销售、服务、运营、支撑
+用 BPMN 流程图描述 30+ 核心流程，标识自动化潜力。</p>
+</blockquote>
+<p><strong>论点 3：应用架构设计</strong></p>
+<blockquote>
+<p>现状 200+ 烟囱式系统，目标"5+25"：
+- <strong>5 大中台</strong>：用户、商品、订单、支付、营销
+- <strong>25 个前台应用</strong>：按业务线快速创新
+接口规范统一为 RESTful + OpenAPI 3.0，跨域调用必经 API 网关。</p>
+</blockquote>
+<p><strong>论点 4：数据架构设计</strong></p>
+<blockquote>
+<p>推行 OneData 方法论：
+- <strong>OneModel</strong>：统一数据模型（事实表 + 维度表）
+- <strong>OneID</strong>：用户/商品全域唯一标识
+- <strong>OneService</strong>：数据服务网关统一访问
+建立数据治理委员会，制定主数据管理、数据质量、数据安全规范。</p>
+</blockquote>
+<p><strong>论点 5：技术架构设计</strong></p>
+<blockquote>
+<p>技术栈标准化：
+- 开发：Java 17 + Spring Cloud Alibaba
+- 数据库：MySQL（OLTP）+ ClickHouse（OLAP）
+- 缓存：Redis Cluster
+- 消息：RocketMQ
+- 部署：Kubernetes + Service Mesh（Istio）
+- 监控：Prometheus + Grafana + SkyWalking</p>
+</blockquote>
+<p><strong>论点 6：分阶段迁移规划</strong></p>
+<blockquote>
+<p>三年路线图：
+- <strong>第 1 年</strong>：建中台底座 + 试点 1 个业务线
+- <strong>第 2 年</strong>：核心业务迁移 + 数据中台建设
+- <strong>第 3 年</strong>：全面迁移 + 智能化升级
+每个里程碑设回退点，保证业务连续性。</p>
+</blockquote>
+<p><strong>论点 7：架构治理机制</strong></p>
+<blockquote>
+<p>设立架构委员会（CIO + 总监 + 首席架构师），月度评审重大决策；
+建立技术选型白名单，新中间件需走 POC 评估；
+制定接口规范与数据标准，所有应用接入必检。</p>
+</blockquote>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>三年改造后：核心系统交付周期从 6 个月缩短至 3.5 个月；应用复用率提升至 55%；跨部门流程平均时长缩短 40%；IT 重复投资减少 32%；通过 TOGAF 认证。</p>
+</blockquote>
+<hr />
+<h3 id="154-v20">15.4 数字化转型论文模板（V2.0 大纲新增）<a class="headerlink" href="#154-v20" title="Permanent link">&para;</a></h3>
+<p><strong>适用题目</strong>：
+- 数字化转型背景下的系统架构设计
+- 传统企业的云原生转型
+- 业务中台与数字化能力建设</p>
+<p><strong>理论要点</strong>：</p>
+<blockquote>
+<p>数字化转型是企业利用数字技术重塑业务模式、流程与组织的系统工程。技术架构层面通常包含：云基础设施、容器化、微服务、中台、数据智能、低代码、敏捷 DevOps 等多个支柱。</p>
+</blockquote>
+<p><strong>实践要点</strong>：</p>
+<p><strong>论点 1：转型驱动与目标</strong></p>
+<blockquote>
+<p>传统业务系统建设周期长（6-12 个月）、试错成本高、数据孤岛严重。转型目标：
+- 新业务上线周期 ≤ 1 个月
+- IT 与业务交付效率 +200%
+- 数据驱动决策覆盖率 ≥ 80%</p>
+</blockquote>
+<p><strong>论点 2：云原生基础设施</strong></p>
+<blockquote>
+<p>上云路径：
+- 资源层：IaaS（计算、存储、网络）
+- 平台层：容器化（K8s）+ 中间件托管
+- 服务层：DevOps 流水线 + 监控
+实现资源弹性、按量计费、自动运维。</p>
+</blockquote>
+<p><strong>论点 3：业务中台建设</strong></p>
+<blockquote>
+<p>"厚中台、薄前台"：
+- <strong>业务中台</strong>：复用业务能力（用户、订单、商品）
+- <strong>数据中台</strong>：复用数据能力（标签、指标、画像）
+- <strong>技术中台</strong>：复用技术能力（消息、缓存、网关）
+前台业务可基于中台 1-2 周快速上线创新应用。</p>
+</blockquote>
+<p><strong>论点 4：数据驱动</strong></p>
+<blockquote>
+<p>构建数据闭环：
+- 数据采集：埋点 + 业务库 + 第三方
+- 数据存储：数仓 + 数据湖
+- 数据分析：BI + AI 模型
+- 数据应用：推荐、风控、运营
+实现"业务-数据-智能"闭环。</p>
+</blockquote>
+<p><strong>论点 5：DevOps 与敏捷转型</strong></p>
+<blockquote>
+<p>推行 DevOps + Scrum：
+- 双周迭代、需求看板
+- CI/CD 流水线（Jenkins + GitLab + Harbor）
+- 自动化测试覆盖率 ≥ 80%
+- 灰度发布与一键回滚
+部署频率从月级提升至日级。</p>
+</blockquote>
+<p><strong>论点 6：低代码与敏捷创新</strong></p>
+<blockquote>
+<p>引入低代码平台（如钉钉宜搭、阿里云 LCDP），让业务人员搭建简单流程应用，IT 聚焦核心系统。每月低代码上线应用 20+ 个。</p>
+</blockquote>
+<p><strong>论点 7：组织与文化转型</strong></p>
+<blockquote>
+<p>技术转型必须配合组织转型：
+- 团队按业务域重组（2-pizza team）
+- 推行结果导向 OKR
+- 设立创新孵化机制</p>
+</blockquote>
+<p><strong>效果数据示例</strong>：</p>
+<blockquote>
+<p>转型 2 年后：新业务上线周期从 8 个月缩短至 3 周；IT 交付效率提升 250%；数据驱动决策覆盖核心场景 85%；客户满意度 NPS 提升 25 分；运营成本下降 30%。</p>
+</blockquote>
+<hr />
+<h3 id="155">15.5 软件可靠性专项补强（论文细化版）<a class="headerlink" href="#155" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>高可用模板已有，本节进一步补充<strong>可靠性工程方法学</strong>视角，应对偏理论题目。</p>
+</blockquote>
+<p><strong>论点补强：可靠性分析方法</strong></p>
+<p><strong>FTA（故障树分析）</strong>：</p>
+<blockquote>
+<p>自顶向下从故障结果追溯原因。例如：核心交易失败 → 数据库异常 OR 网络异常 OR 应用异常 → 进一步分解到叶子。通过 FTA 识别出 3 个最关键故障路径并优先加固。</p>
+</blockquote>
+<p><strong>FMEA（失效模式与影响分析）</strong>：</p>
+<blockquote>
+<p>自底向上分析每个组件的失效模式及对系统的影响。识别风险优先级 RPN = 严重度 × 发生度 × 检测度，对 RPN &gt; 100 的组件优先治理。</p>
+</blockquote>
+<p><strong>RBD（可靠性框图）</strong>：</p>
+<blockquote>
+<p>用串并联结构建模整体可靠度。例如：核心链路 R = R_接入 × R_应用 × R_数据库；其中 R_数据库 = 1-(1-0.99)² = 0.9999（双副本并联）。通过 RBD 量化各方案对整体可靠度的贡献。</p>
+</blockquote>
+<hr />
+<h3 id="156">15.6 论文兜底主题映射速查（扩展）<a class="headerlink" href="#156" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>真题主题关键词</th>
+<th>优先调用模板</th>
+<th>关键论点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>微服务/服务化</strong></td>
+<td>模板 1 微服务</td>
+<td>拆分、通信、治理、监控</td>
+</tr>
+<tr>
+<td><strong>架构评估/质量属性</strong></td>
+<td>模板 2 ATAM</td>
+<td>效用树、敏感点、权衡点</td>
+</tr>
+<tr>
+<td><strong>高可用/容错/可靠性</strong></td>
+<td>模板 3 + 15.5</td>
+<td>冗余、检测、转移、FTA</td>
+</tr>
+<tr>
+<td><strong>数据架构/中台</strong></td>
+<td>模板 4</td>
+<td>分库分表、缓存、数仓分层</td>
+</tr>
+<tr>
+<td><strong>信息安全</strong></td>
+<td>模板 5</td>
+<td>认证、加密、防注入、审计</td>
+</tr>
+<tr>
+<td><strong>设计模式</strong></td>
+<td>模板 6</td>
+<td>策略、工厂、观察者、装饰</td>
+</tr>
+<tr>
+<td><strong>Serverless/弹性</strong></td>
+<td>模板 13.1</td>
+<td>事件驱动、状态外置</td>
+</tr>
+<tr>
+<td><strong>云原生数据库</strong></td>
+<td>模板 13.2</td>
+<td>存算分离、读写分离</td>
+</tr>
+<tr>
+<td><strong>性能测试与优化</strong></td>
+<td>模板 13.3</td>
+<td>压测、定位、分层优化</td>
+</tr>
+<tr>
+<td><strong>信创/国产化</strong></td>
+<td>模板 13.4</td>
+<td>兼容、迁移、双轨验证</td>
+</tr>
+<tr>
+<td><strong>秒杀/高并发</strong></td>
+<td>模板 13.5</td>
+<td>限流、削峰、缓存、降级</td>
+</tr>
+<tr>
+<td><strong>企业架构/规划</strong></td>
+<td>模板 15.3</td>
+<td>四层架构、ADM、治理</td>
+</tr>
+<tr>
+<td><strong>架构演化/治理</strong></td>
+<td>模板 15.2</td>
+<td>ADR、评审、技术债、度量</td>
+</tr>
+<tr>
+<td><strong>AOP/面向方面</strong></td>
+<td>模板 15.1</td>
+<td>切面、连接点、通知、织入</td>
+</tr>
+<tr>
+<td><strong>数字化转型</strong></td>
+<td>模板 15.4</td>
+<td>中台、云原生、数据驱动</td>
+</tr>
+<tr>
+<td><strong>DevOps/敏捷</strong></td>
+<td>模板 15.4 部分</td>
+<td>CI/CD、自动化、看板</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="157">15.7 论文易丢分点与挽救技巧<a class="headerlink" href="#157" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>易丢分点</th>
+<th>后果</th>
+<th>挽救方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字数 &lt; 2500</td>
+<td>印象分扣 5-10 分</td>
+<td>写完正文再回填实例细节</td>
+</tr>
+<tr>
+<td>摘要无项目角色</td>
+<td>摘要分扣半</td>
+<td>模板默写 5 遍</td>
+</tr>
+<tr>
+<td>实践无量化数据</td>
+<td>实践分扣</td>
+<td>每个论点配 1 个量化指标</td>
+</tr>
+<tr>
+<td>论点 &lt; 4 个</td>
+<td>单薄</td>
+<td>强制 4-6 个论点结构</td>
+</tr>
+<tr>
+<td>无反思与不足</td>
+<td>不客观</td>
+<td>结尾必含 1-2 条反思</td>
+</tr>
+<tr>
+<td>字迹潦草</td>
+<td>印象分扣 3-5 分</td>
+<td>控速，宁少不潦</td>
+</tr>
+<tr>
+<td>论点偏题</td>
+<td>直接判低</td>
+<td>写前花 5 分钟核对论点与题目</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="158">15.8 临场救场技巧<a class="headerlink" href="#158" title="Permanent link">&para;</a></h3>
+<p><strong>遇到完全陌生主题时</strong>：
+1. <strong>拆主题为已知概念</strong>：例如"AIGC 架构"=微服务+大模型推理+缓存
+2. <strong>套用通用项目背景</strong>：电商/金融/政务三选一
+3. <strong>借用已有论点</strong>：服务拆分、缓存、容错、监控是万能论点
+4. <strong>保结构完整</strong>：宁可论点稍弱，结构必须 4 段齐全</p>
+<p><strong>遇到时间不够时</strong>：
+1. 摘要必须写完（决定第一印象）
+2. 项目介绍 + 1 个核心论点 + 简短反思
+3. 即使写到 2000 字，分点清晰也比写满 3000 字泛泛要高</p>
+<hr />
+<h2 id="3-90">十六、项目背景库（必备 3 套，背熟即可应对 90% 主题）<a class="headerlink" href="#3-90" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>📌 <strong>使用说明</strong>：选 2-3 套项目背景<strong>背熟</strong>（含规模、技术栈、量化数据），考场上根据论文主题灵活套用。
+推荐组合：<strong>电商 + 金融 + 政务/工业</strong> 三套，覆盖面最广。
+<strong>每套都按"业务背景 + 项目规模 + 技术栈 + 量化数据 + 适用主题"五要素准备</strong>。</p>
+</blockquote>
+<hr />
+<h3 id="161-a">16.1 项目背景 A：互联网电商平台（万能首选）<a class="headerlink" href="#161-a" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>适用 70% 论文主题：微服务 / 高可用 / 高并发 / 缓存 / 数据架构 / 性能优化 / Serverless / 秒杀</p>
+</blockquote>
+<p><strong>🔹 业务背景</strong></p>
+<blockquote>
+<p>2023 年 3 月至 2024 年 6 月，本人有幸主导了 <strong>XX 跨境电商平台二期改造项目</strong>。
+该平台服务东南亚 6 国 C 端用户，业务涵盖商品展示、订单管理、支付结算、物流跟踪、营销活动 5 大模块。
+由于一期采用单体架构，随着日活从 5 万增长至 50 万，<strong>系统响应慢（首页 P99 达 4.5 秒）、迭代慢（每月仅能发布 1 次）、大促宕机（2022 双 11 故障 3 小时）</strong> 三大痛点凸显，业务方决定启动微服务化改造。</p>
+</blockquote>
+<p><strong>🔹 项目规模</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工期</td>
+<td>15 个月（2023.3 - 2024.6）</td>
+</tr>
+<tr>
+<td>团队规模</td>
+<td>32 人（架构师 2、后端 18、前端 6、测试 4、运维 2）</td>
+</tr>
+<tr>
+<td>总投资</td>
+<td>1200 万元</td>
+</tr>
+<tr>
+<td>用户规模</td>
+<td>日活 50 万、月活 300 万、注册用户 800 万</td>
+</tr>
+<tr>
+<td>业务规模</td>
+<td>日均订单 8 万、SKU 60 万、峰值 QPS 8000</td>
+</tr>
+<tr>
+<td>团队组织</td>
+<td>5 个特性团队（按业务域），共 6 个 Scrum 迭代周期</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔹 技术栈</strong>
+- <strong>前端</strong>：Vue 3 + TypeScript + Vite + Element Plus（PC 端）+ Uni-app（小程序）
+- <strong>后端</strong>：Java 17 + Spring Cloud Alibaba（Nacos / Sentinel / Seata / Dubbo）
+- <strong>数据库</strong>：MySQL 8.0（OLTP 分库分表 ShardingSphere）+ ClickHouse（OLAP）+ Elasticsearch（搜索）
+- <strong>缓存</strong>：Redis Cluster（6 主 6 从，分布式锁 + 热点缓存）
+- <strong>消息</strong>：RocketMQ 5.x（事务消息 + 异步削峰）
+- <strong>部署</strong>：Kubernetes + Istio + Prometheus + Grafana + SkyWalking
+- <strong>CI/CD</strong>：GitLab + Jenkins + Harbor + ArgoCD</p>
+<p><strong>🔹 个人角色</strong></p>
+<blockquote>
+<p>本人在该项目中担任 <strong>系统架构师</strong>，主要负责：①总体架构设计与决策 ②微服务拆分与服务治理方案 ③关键技术选型 ④质量属性保障 ⑤架构评审与团队培训</p>
+</blockquote>
+<p><strong>🔹 量化数据库（按论文主题套用）</strong></p>
+<table>
+<thead>
+<tr>
+<th>主题方向</th>
+<th>可引用的量化数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性能</td>
+<td>首页 P99 从 4.5s → 800ms；峰值 QPS 从 1500 → 8000</td>
+</tr>
+<tr>
+<td>可用性</td>
+<td>从 99.5% → 99.99%（年宕机 &lt; 53 分钟）；MTTR 从 30min → 5min</td>
+</tr>
+<tr>
+<td>微服务</td>
+<td>拆分为 28 个微服务；部署频率从月 1 次 → 日 5 次</td>
+</tr>
+<tr>
+<td>缓存</td>
+<td>Redis 命中率 96%；DB QPS 下降 70%</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>单订单成本下降 35%；峰值期资源弹性扩容 3 倍</td>
+</tr>
+<tr>
+<td>团队</td>
+<td>需求交付周期从 6 周 → 2 周；变更失败率从 18% → 6%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔹 可套用论文主题（≥ 12 个）</strong>
+微服务架构 / 高可用 / 高并发 / 缓存设计 / 数据架构 / 性能测试与优化 / 秒杀场景 / 服务治理 / 云原生 / 容器化 / DevOps / 架构演化与治理 / 分布式事务 / 多源数据集成</p>
+<hr />
+<h3 id="162-b">16.2 项目背景 B：金融银行核心系统（安全 / 可靠性首选）<a class="headerlink" href="#162-b" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>适用 50% 论文主题：信息安全 / 高可用 / 信创适配 / 架构评估 / 分布式事务 / SOA / 合规</p>
+</blockquote>
+<p><strong>🔹 业务背景</strong></p>
+<blockquote>
+<p>2022 年 8 月至 2024 年 2 月，本人参与了 <strong>XX 城商行新一代核心业务系统建设项目</strong>。
+该项目旨在替换运行 15 年的 IBM 大型机老系统，构建<strong>自主可控、高可用、可扩展</strong>的新一代核心，支撑 200 万储户、日均 80 万笔交易、单笔最大 5000 万元的资金清算。
+老系统存在 <strong>运维成本高（年 800 万）、扩展性差（峰值期排队）、信创合规风险（IBM 设备）</strong> 三大问题，监管也要求 2025 年前完成自主可控替换。</p>
+</blockquote>
+<p><strong>🔹 项目规模</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工期</td>
+<td>18 个月（2022.8 - 2024.2）</td>
+</tr>
+<tr>
+<td>团队规模</td>
+<td>45 人（架构师 3、后端 22、前端 4、测试 8、运维 4、业务 4）</td>
+</tr>
+<tr>
+<td>总投资</td>
+<td>6800 万元</td>
+</tr>
+<tr>
+<td>用户规模</td>
+<td>储户 200 万、对公客户 5 万、内部用户 3000</td>
+</tr>
+<tr>
+<td>业务规模</td>
+<td>日均交易 80 万笔、峰值 TPS 2000、单笔最大 5000 万元</td>
+</tr>
+<tr>
+<td>合规要求</td>
+<td>等保 2.0 三级、人行金融行业信息安全等级保护、银保监合规检查</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔹 技术栈（信创合规）</strong>
+- <strong>基础设施</strong>：华为鲲鹏 920 服务器 + 麒麟 V10 操作系统 + 华为云 Stack
+- <strong>中间件</strong>：东方通 TongWeb（应用服务器）+ TongLink/Q（消息）+ Nginx
+- <strong>数据库</strong>：达梦 DM8（OLTP）+ openGauss（备库）+ Oracle（过渡期保留）
+- <strong>微服务</strong>：Spring Cloud + Dubbo（兼容自有 RPC）+ Apollo 配置中心
+- <strong>安全</strong>：国密 SM2/SM3/SM4 + 硬件密码机 + Kerberos 认证 + 堡垒机
+- <strong>可观测</strong>：Prometheus + ELK + SkyWalking
+- <strong>灾备</strong>：同城双活 + 异地灾备（RPO &lt; 30 秒、RTO &lt; 10 分钟）</p>
+<p><strong>🔹 个人角色</strong></p>
+<blockquote>
+<p>本人在该项目中担任 <strong>系统架构师</strong>，主要负责：①信创适配技术选型 ②高可用与灾备架构设计 ③安全架构（合规 + 加密 + 审计）④分布式事务方案 ⑤架构评估与权威机构沟通</p>
+</blockquote>
+<p><strong>🔹 量化数据库</strong></p>
+<table>
+<thead>
+<tr>
+<th>主题方向</th>
+<th>可引用的量化数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可用性</td>
+<td>系统可用性 99.999%（年宕机 &lt; 5 分钟）；故障切换 &lt; 30 秒</td>
+</tr>
+<tr>
+<td>安全</td>
+<td>通过等保三级测评；国密改造覆盖 100% 接口；安全事件 0 起</td>
+</tr>
+<tr>
+<td>信创</td>
+<td>适配国产 CPU/OS/DB/中间件，自主率 95%；性能达原系统 105%</td>
+</tr>
+<tr>
+<td>灾备</td>
+<td>同城双活 + 异地灾备，RPO &lt; 30 秒、RTO &lt; 10 分钟</td>
+</tr>
+<tr>
+<td>分布式事务</td>
+<td>TCC + Seata 混合方案，跨账户转账成功率 99.99%</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>总拥有成本 3 年节省 4500 万；运维人力下降 40%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔹 可套用论文主题（≥ 8 个）</strong>
+信息安全架构 / 高可用与可靠性 / 信创/国产化适配 / 架构评估（ATAM）/ 分布式事务 / SOA / 软件维护 / 多源异构数据集成 / 企业架构 TOGAF</p>
+<hr />
+<h3 id="163-c">16.3 项目背景 C：政务/工业互联网平台（兜底 + 新热点）<a class="headerlink" href="#163-c" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>适用 40% 论文主题：企业架构 / 数据中台 / 数字化转型 / 端边云 / 数字孪生 / 工作流 / 多源集成</p>
+</blockquote>
+<p><strong>🔹 业务背景</strong></p>
+<blockquote>
+<p>2023 年 5 月至 2024 年 12 月，本人主导了 <strong>XX 省智慧城市政务一体化平台项目</strong>。
+该项目整合全省 18 个委办局、47 个业务系统，构建统一身份认证、统一数据共享、统一服务门户的"互联网+政务服务"平台，服务 4500 万省民和 60 万企业用户。
+项目核心痛点：<strong>数据孤岛严重（数据共享率 &lt; 15%）、跨部门流程慢（平均 12 天）、用户体验差（满意度 62%）</strong>，省政府要求 2 年内将"一次办成"事项覆盖率提升到 80%。</p>
+</blockquote>
+<p><strong>🔹 项目规模</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工期</td>
+<td>20 个月（2023.5 - 2024.12）</td>
+</tr>
+<tr>
+<td>团队规模</td>
+<td>68 人（多供应商联合体）；本人作为甲方架构师统筹技术</td>
+</tr>
+<tr>
+<td>总投资</td>
+<td>1.5 亿元（含硬件 + 软件 + 服务）</td>
+</tr>
+<tr>
+<td>业务覆盖</td>
+<td>18 个委办局、47 个业务系统、237 个政务事项</td>
+</tr>
+<tr>
+<td>用户规模</td>
+<td>C 端省民 4500 万、B 端企业 60 万、G 端公务员 5 万</td>
+</tr>
+<tr>
+<td>数据规模</td>
+<td>主数据 35 个主题域、6 亿条记录；日均 API 调用 800 万次</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔹 技术栈（架构演进式）</strong>
+- <strong>前端</strong>：React + TypeScript + Ant Design Pro（PC 门户）+ 微信小程序（移动）
+- <strong>后端</strong>：Spring Cloud Alibaba（业务中台）+ DataX（数据集成）
+- <strong>数据</strong>：MySQL（OLTP）+ TiDB（HTAP）+ Hadoop / Hive（数仓）+ DataHub（数据治理）+ Flink（实时流）
+- <strong>集成</strong>：API 网关 APISIX + 消息总线 Kafka + ESB 兼容（对接老系统）
+- <strong>AI 能力</strong>：自研 OCR + 政务知识图谱 + RPA + 大模型问答助手
+- <strong>基础设施</strong>：政务云（华为 + 阿里混合云）+ Kubernetes + 边缘节点（17 个市级机房）
+- <strong>安全</strong>：国密 + 等保三级 + 数据脱敏 + 区块链电子证照</p>
+<p><strong>🔹 个人角色</strong></p>
+<blockquote>
+<p>本人在该项目中担任 <strong>总体架构师</strong>（甲方），主要负责：①顶层架构设计（业务/应用/数据/技术四层）②跨厂商技术对接 ③数据中台与共享交换设计 ④微服务与中台的演化路径 ⑤架构评审与监管汇报</p>
+</blockquote>
+<p><strong>🔹 量化数据库</strong></p>
+<table>
+<thead>
+<tr>
+<th>主题方向</th>
+<th>可引用的量化数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据架构</td>
+<td>数据共享率 15% → 78%；主数据治理覆盖 35 个主题域</td>
+</tr>
+<tr>
+<td>流程优化</td>
+<td>跨部门事项时长 12 天 → 1.5 天；"一次办成"覆盖率 80%</td>
+</tr>
+<tr>
+<td>系统集成</td>
+<td>47 个老系统对接成功率 100%；ESB + API 网关日处理 800 万次</td>
+</tr>
+<tr>
+<td>用户体验</td>
+<td>群众满意度 62% → 91%；移动端办件占比从 10% → 65%</td>
+</tr>
+<tr>
+<td>数字化转型</td>
+<td>推动 8 项业务流程重组；引入 RPA 自动化 23 个事项</td>
+</tr>
+<tr>
+<td>端边云</td>
+<td>17 个市级边缘节点；端到端响应 &lt; 1 秒</td>
+</tr>
+<tr>
+<td>复用</td>
+<td>中台能力被 35 个应用复用；新业务上线周期从 3 月 → 6 周</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔹 可套用论文主题（≥ 10 个）</strong>
+企业架构 TOGAF / 数据中台 / 数字化转型 / 多源异构数据集成 / 业务流程重组 BPR / 系统集成（ESB/API/MQ）/ 端-边-云协同 / 工作流引擎 / 软件架构演化与治理 / 信息系统规划 BSP</p>
+<hr />
+<h3 id="164">16.4 项目背景选用决策表（考场速查）<a class="headerlink" href="#164" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>论文主题关键词</th>
+<th>首选项目</th>
+<th>备用项目</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微服务 / 服务治理</td>
+<td><strong>A 电商</strong></td>
+<td>C 政务</td>
+</tr>
+<tr>
+<td>高并发 / 秒杀 / 缓存 / 性能</td>
+<td><strong>A 电商</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>高可用 / 可靠性 / 灾备</td>
+<td><strong>B 金融</strong></td>
+<td>A 电商</td>
+</tr>
+<tr>
+<td>信息安全 / 信创 / 合规</td>
+<td><strong>B 金融</strong></td>
+<td>C 政务</td>
+</tr>
+<tr>
+<td>架构评估 ATAM</td>
+<td>A / B / C 任选</td>
+<td>-</td>
+</tr>
+<tr>
+<td>分布式事务 / 数据一致性</td>
+<td><strong>B 金融</strong></td>
+<td>A 电商</td>
+</tr>
+<tr>
+<td>数据架构 / 数据中台 / 多源集成</td>
+<td><strong>C 政务</strong></td>
+<td>A 电商</td>
+</tr>
+<tr>
+<td>企业架构 TOGAF / 数字化转型</td>
+<td><strong>C 政务</strong></td>
+<td>B 金融</td>
+</tr>
+<tr>
+<td>Serverless / 云原生</td>
+<td><strong>A 电商</strong></td>
+<td>C 政务</td>
+</tr>
+<tr>
+<td>SOA / 企业集成</td>
+<td><strong>C 政务</strong></td>
+<td>B 金融</td>
+</tr>
+<tr>
+<td>软件维护 / 演化治理</td>
+<td><strong>B 金融</strong></td>
+<td>A 电商</td>
+</tr>
+<tr>
+<td>嵌入式 / 端边云 / 数字孪生</td>
+<td><strong>C 政务</strong>（工业子项）</td>
+<td>-</td>
+</tr>
+<tr>
+<td>AI / 大模型应用</td>
+<td>A / C 任选</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>小贴士</strong>：3 个项目背景背熟后，<strong>几乎任何主题都能找到适合的项目背景套用</strong>。
+如果实在不熟悉主题，<strong>优先用 A（电商）</strong>，因为它适用最广，量化数据最丰富。</p>
+</blockquote>
+<hr />
+<h2 id="_11">十七、套装资料一览<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>架构设计师考点整理.md</code></td>
+<td>综合手册（含选择/案例/论文综合）</td>
+</tr>
+<tr>
+<td><code>选择题考点速记.md</code></td>
+<td>上午综合知识 75 题专用</td>
+</tr>
+<tr>
+<td><code>案例分析考点速记.md</code></td>
+<td>下午Ⅰ 5 道案例题专用</td>
+</tr>
+<tr>
+<td><strong><code>论文题考点速记.md</code></strong></td>
+<td><strong>下午Ⅱ 论文题专用（本文档）</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>整理日期</strong>：2026-05<br />
+<strong>覆盖范围</strong>：近 15 年真题论文主题 + 近年热点论文模板补充<br />
+<strong>使用建议</strong>：
+1. 通读 1 遍，标记自己最熟悉的 2-3 个主题作为主备模板
+2. 摘要必背：300 字摘要黄金模板默写 5 遍
+3. 项目背景：选 2-3 个项目背景背熟（含数据）
+4. 模拟训练：考前必做 2-3 篇限时论文
+5. 临场策略：4 选 1 优先选微服务/可靠性/架构评估/数据相关
+6. 字数底线：宁可写 2500 字精炼，不写 3000 字泛泛</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 pianpian · 内容采用 CC BY-NC-SA 4.0 协议
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/pianpian315/ruankao-architect-notes" target="_blank" rel="noopener" title="GitHub 仓库" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tabs.link", "content.action.edit", "toc.follow", "announce.dismiss"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
